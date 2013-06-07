@@ -1,0 +1,3977 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme name="OpenSkin Basic" version="1609">
+	<properties>
+		<templateset><![CDATA[4]]></templateset>
+		<editortheme><![CDATA[default]]></editortheme>
+		<imgdir><![CDATA[images/openskin]]></imgdir>
+		<logo><![CDATA[images/openskin/logo.png]]></logo>
+		<tablespace><![CDATA[0]]></tablespace>
+		<borderwidth><![CDATA[0]]></borderwidth>
+	</properties>
+	<stylesheets>
+		<stylesheet name="usercp.css" attachedto="usercp.php|usercp2.php|private.php" version="1609"><![CDATA[]]>
+		</stylesheet>
+		<stylesheet name="global.css" version="1609"><![CDATA[/*########## MYBB BOOTSTRAP 0.1 ##########*/
+/*							                                 */
+/*		Feel free to edit and redistribute.			 */
+/*		Base theme inspired by XenForo.			 */
+/*             Get support at the official forum thread:          */
+/*                                                                                      */
+/*################################## */
+
+#userPanelFix {
+border-radius: 3px 0px 0px 3px;
+border-right: 1px solid #FCFCFC;
+}
+
+/* ### THREAD LIST ### */
+.date {
+font-size: 8pt;
+color: #A0A0A0;
+}
+.table th, .table td {
+border-top: 1px solid #F1F1F1;
+}
+
+.threadList {
+padding: 10px 10px 10px 10px;
+border: 1px solid #E4E4E4;
+border: 1px solid #F0F0F0;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .075);
+-moz-box-shadow: 0 1px 2px rgba(0,0,0,.075);
+box-shadow: 0 1px 2px rgba(0, 0, 0, .075);
+margin-bottom: 12px;
+background-color: #FDFDFD;
+margin-top: 34px;
+}
+
+.threadList select {
+margin-top: 10px;
+}
+
+.threadList table {
+margin-bottom: 0px;
+}
+
+
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3); 
+background-color:#F5F5F5;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #FAFAFA; 
+    -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.5); 
+}
+
+
+
+
+/* ### REGISTRATION ### */
+		.registrationBreadcrumb { 
+			list-style: none; 
+			overflow: hidden; 
+			font: 18px Helvetica, Arial, Sans-Serif;
+		}
+		.registrationBreadcrumb li { 
+			float: left; 
+		}
+		.registrationBreadcrumb li a {
+			color: white;
+			text-decoration: none; 
+			padding: 10px 0 10px 55px;
+			background: brown;                   /* fallback color */
+			background: hsla(34,85%,35%,1); 
+			position: relative; 
+			display: block;
+			float: left;
+		}
+		.registrationBreadcrumb li a:after { 
+			content: " "; 
+			display: block; 
+			width: 0; 
+			height: 0;
+			border-top: 50px solid transparent;           /* Go big on the size, and let overflow hide */
+			border-bottom: 50px solid transparent;
+			border-left: 30px solid hsla(34,85%,35%,1);
+			position: absolute;
+			top: 50%;
+			margin-top: -50px; 
+			left: 100%;
+			z-index: 2; 
+		}	
+.registrationBreadcrumb li a:before { 
+	content: " "; 
+	display: block; 
+	width: 0; 
+	height: 0;
+	border-top: 50px solid transparent;           /* Go big on the size, and let overflow hide */
+	border-bottom: 50px solid transparent;
+	border-left: 30px solid white;
+	position: absolute;
+	top: 50%;
+	margin-top: -50px; 
+	margin-left: 1px;
+	left: 100%;
+	z-index: 1; 
+}	
+.registrationBreadcrumb li:first-child a {
+	padding-left: 10px;
+}
+.registrationBreadcrumb li:nth-child(2) a       { background:        hsla(34,85%,45%,1); }
+.registrationBreadcrumb li:nth-child(2) a:after { border-left-color: hsla(34,85%,45%,1); }
+.registrationBreadcrumb li:nth-child(3) a       { background:        hsla(34,85%,55%,1); }
+.registrationBreadcrumb li:nth-child(3) a:after { border-left-color: hsla(34,85%,55%,1); }
+.registrationBreadcrumb li:nth-child(4) a       { background:        hsla(34,85%,65%,1); }
+.registrationBreadcrumb li:nth-child(4) a:after { border-left-color: hsla(34,85%,65%,1); }
+.registrationBreadcrumb li:nth-child(5) a       { background:        hsla(34,85%,75%,1); }
+.registrationBreadcrumb li:nth-child(5) a:after { border-left-color: hsla(34,85%,75%,1); }
+.registrationBreadcrumb li:last-child a {
+	background: transparent !important;
+	color: black;
+	pointer-events: none;
+	cursor: default;
+}
+.registrationBreadcrumb li:last-child a:after { border: 0; }
+.registrationBreadcrumb li a:hover { background: hsla(34,85%,25%,1); }
+.registrationBreadcrumb li a:hover:after { border-left-color: hsla(34,85%,25%,1) !important; }
+
+
+
+
+/* ### FORUMDISPLAY  ### */
+
+.markRead {
+
+}
+
+.forumJump {
+float: right;
+margin-top: -60px;
+margin-right: 1px;
+}
+.forumJumpSelect {
+margin-top: 9px;
+height: 27px;
+font-size: 8pt;
+width: 138px;
+color: #AFAFAF;
+}
+.searchBox {
+width: 112px;
+height: 13px !important;
+font-size: 8pt !important;
+font-style: italic;
+color: #B6B6B6 !important;
+border: 1px solid #CCC !important;
+}
+.searchBoxContainer {
+display: inline-block;
+padding: 14px;
+background-color: #FAFAFA;
+border: 1px solid #EBEBEB;
+border-radius: 4px;
+height: 23px;
+float: right;
+}
+.searchBoxBtn {
+margin-top: -11px;
+}
+.modOptionsToggle {
+text-align: center;
+font-size: 8pt;
+background-color: #FDFDFD;
+width: 135px;
+margin: 0 auto;
+margin-top: -31px;
+margin-bottom: 10px;
+position: relative;
+border-radius: 4px 4px 0px 0px;
+border-top: 1px solid #E6E6E6;
+border-left: 1px solid #E6E6E6;
+border-right: 1px solid #E6E6E6;
+color: #ADADAD;
+cursor: pointer;
+box-shadow: 0px -2px 4px #FAFAFA, inset 0 9px 7px #FFF;
+-webkit-user-select: none;
+-moz-user-select: none;
+onselectstart: return false;
+}
+.modOptions {
+display: none;
+background: #FCFCFC;
+border: 1px solid #E6E6E6;
+border-radius: 4px;
+padding: 0 5px 0px 9px;
+margin-bottom: 10px;
+height: 54px;
+}
+.subForum {
+font-size: 8pt;
+text-align: right;
+margin-top: -15px;
+}
+.forumdisplayThread .author {
+display: inline-block;
+}
+.forumdisplayThread .multipage {
+display: inline-block;
+}
+.threadListHead a {
+color: #C2C2C2;
+font-size: 8pt;
+}
+.threadListHead .author a {
+margin-left: 11px;
+}
+.threadListHead {
+background-color: #FAFAFA;
+border-top: 1px solid #ECECEC;
+border-bottom: 1px solid #F0F0F0;
+height: 24px;
+box-shadow: inset 0px 10px 18px #F5F5F5;
+width: 100%;
+font-size: 8pt;
+}
+.threadListHead .title {
+display: inline-block;
+}
+.threadListHead .stats {
+display: inline-block;
+}
+.threadListHead .thread {
+display: inline-block;
+width: 50%;
+margin-left: 36px;
+}
+.threadListHead .lastPost {
+display: inline-block;
+}
+.threadListHead .author {
+display: inline-block;
+position: absolute;
+width: 18%;
+text-align: right;
+}
+.author a {
+color: #B6B6B6;
+}
+
+.current {
+background-color: red;
+}
+
+.multipage {
+display: inline-block;
+}
+.multipage .page {
+color: #B3B3B3;
+background-color: #FDFDFD;
+font-size: 7pt;
+border: 1px solid #E7E7E7;
+border-radius: 3px;
+padding: 0px 2px;
+}
+.multipage .page:hover {
+background-color: #ECECEC;
+color: #FFF;
+text-decoration: none;
+}
+.sortForm {
+display: none;
+background: #FCFCFC;
+border: 1px solid #E6E6E6;
+border-radius: 4px;
+padding: 0 5px 0px 9px;
+margin-top: 10px;
+}
+.sortFormToggle {
+text-align: center;
+font-size: 8pt;
+background-color: #FDFDFD;
+width: 135px;
+margin: -13px auto 20px;
+position: relative;
+border-radius: 0px 0px 4px 4px;
+border-bottom: 1px solid #E6E6E6;
+border-left: 1px solid #E6E6E6;
+border-right: 1px solid #E6E6E6;
+color: #ADADAD;
+cursor: pointer;
+box-shadow: 0px 2px 4px #FAFAFA, inset 0 -9px 7px #FFF;
+-webkit-user-select: none;
+-moz-user-select: none;
+onselectstart: return false;
+}
+.forumdisplayThread {
+border-bottom: 1px solid #F1F1F1;
+height: 53px;
+}
+#forumdisplayThreadStats {
+padding: 8px;
+text-align: center;
+border-left: 1px solid #F8F8F8;
+border-right: 1px solid #F8F8F8;
+color: #A7A7A7;
+background-color: #FCFCFC;
+}
+
+#forumdisplayThreadAttachments {}
+
+#forumdisplayThreadReplies {
+color: #808080;
+font-size: 11pt;
+}
+
+#forumdisplayThreadViews {
+color: #B3B3B3;
+font-size: 9pt;
+}
+
+
+
+/* ### FIXES - WORKAROUNDS ### */
+
+/* Weird Navigation Dropdown Fix */
+.pagination_breadcrumb_link {
+display: none;
+}
+
+/* Pagination workaround */
+.pagination {
+border-left: 1px solid #DFDFDF;
+border-radius: 3px 0 0 3px;
+height: 22px;
+}
+
+
+.spacefix {
+	margin-top: -64px;
+}
+.spacefixIndex {
+	margin-top: -30px;
+}
+/* SCeditor width fix */
+.sceditor-container {
+width: 100% !important;
+}
+div.sceditor-toolbar {
+box-shadow: inset 0px 20px 41px #FCFCFC;
+}
+div.sceditor-group {
+background: none !important;
+border-bottom: none !important;
+}
+
+
+/* ### MEMBER LOGIN ### */
+.form-signin {
+	max-width: 300px;
+	padding: 19px 29px 29px;
+	margin: 0 auto 20px;
+	background-color: #FFF;
+	border: 1px solid #E5E5E5;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+}
+´.form-signin .form-signin-heading,
+.form-signin .checkbox {
+	margin-bottom: 10px;
+}
+.form-signin input[type="text"],
+.form-signin input[type="password"] {
+	font-size: 16px;
+	height: auto;
+	margin-bottom: 15px;
+	padding: 7px 9px;
+}
+
+
+
+
+/* ### PORTAL - SIDEBAR ### */
+.portalAnnouncementContainer {
+	padding: 14px 14px 0px 14px;
+	border: 1px solid #E4E4E4;
+	border: 1px solid #DDD;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .075);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.075);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .075);
+	margin-bottom: 12px;
+}
+#portalAnnouncementHeader {
+	border-bottom: 1px solid #F3F3F3;
+	height: 38px;
+}
+#portalAnnouncementPostedby {
+	color: #84B1E2;
+}
+#portalAnnouncementAvatar {
+	float: right;
+	margin: -43px 0px 6px 6px;
+	border-radius: 4px;
+	padding: 2px;
+	background-color: #FFF;
+	border: 1px solid #C9C9C9;
+	max-width: 90px;
+}
+#portalAnnouncement {
+	background-color: #FAFAFA;
+	border-radius: 5px;
+	padding: 0px 22px;
+	min-height: 163px;
+	border: 1px solid #EBEBEB;
+	margin-bottom: 17px;
+}
+#portalSidebar {
+	background-color: #F3F3F3;
+	padding: 0px 14px 14px 14px;
+	border-bottom: 1px solid #DADADA;
+	box-shadow: inset 0px 14px 17px #FAFAFA;
+	margin-bottom: 17px;
+}
+.portalSidebarHead {
+	border-bottom: 1px solid #E7E7E7;
+	padding: 6px 0px 3px 0px;
+	color: #858585;
+	font-size: 12pt;
+}
+
+
+/* ### MENU - NAVIGATION ### */
+.navbar .nav {}
+
+
+
+/* ### SHOWTHREAD ### */
+#showthreadTitle {
+color: #6492BD;
+}
+
+
+
+/* ### POSTBIT ### */
+#postbitHeader {
+display: block;
+height: 69px;
+background-color: #F5F5F5;
+border-radius: 5px 5px 0px 0px;
+border: 1px solid #E6E6E6;
+border-bottom: 1px solid #ECECEC;
+box-shadow: inset 0px 20px 41px #FCFCFC;
+border-top: 1px solid #F5F5F5;
+}
+#postbitAvatar {
+border-right: 1px solid #DBDBDB;
+border-radius: 4px 0px 0px 0px;
+}
+#postbitUsername {
+	margin-top: 15px;
+	font-size: 17pt;
+	display: inline-block;
+	margin-left: 7px;
+	color: #6F6F6F;
+}
+#postbitUsertitle {
+	color: #B1B1B1;
+	font-size: 9pt;
+	margin-left: 80px;
+	position: absolute;
+}
+
+.post_body {
+	background-color: #FAFAFA;
+	padding: 9px 17px;
+	border: 1px solid #ECECEC;
+	border-top: 1px solid #FCFCFC;
+	box-shadow: inset 0px 30px 30px #FAFAFA;
+	font-size: 11pt;
+	color: #727272;
+}
+#postbitFoot {
+	height: 24px;
+	background: #F5F5F5;
+	border-radius: 0px 0px 4px 4px;
+	border: 1px solid #EEE;
+	border-top: 1px solid #FCFCFC;
+	margin-bottom: 20px;
+}
+#postbitQuote {
+	text-decoration: none;
+	font-weight: bold;
+	color: #ADADAD;
+	margin-top: 2px;
+	margin-right: 12px;
+	display: inline-block;
+}
+#postbitQuote:hover {
+	color: #4091D1;
+}
+#postbitPostcounter {
+color: #BEBEBE;
+font-size: 9pt;
+position: absolute;
+margin-left: -25px;
+margin-top: 5px;
+}
+
+
+
+/* ### INDEX ### */
+.indexForumContainer {
+padding: 0px 14px 14px 14px;
+border: 1px solid #E4E4E4;
+border: 1px solid #DDD;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .075);
+-moz-box-shadow: 0 1px 2px rgba(0,0,0,.075);
+box-shadow: 0 1px 2px rgba(0, 0, 0, .075);
+margin-bottom: 12px;
+background-color: #FDFDFD;
+}
+
+
+
+/* ### FORUMBIT ### */
+#forumbitForumrow {
+border-bottom: 1px solid #FAFAFA;
+}
+
+#forumbitHeader {
+background-color: #F5F5F5;
+border: 1px solid #F0F0F0;
+display: block;
+padding: 4px 10px;
+border-radius: 4px;
+box-shadow: inset 0px 20px 41px #FCFCFC;
+margin-top: 15px;
+}
+#forumbitCategoryTitle {
+	color: #6F6F6F;
+}
+#forumbitCategoryDescription {
+	font-size: 8pt;
+	margin-top: -3px;
+	color: #929292;
+}
+#forumbitForumStats {
+	margin-top: 11px;
+	color: #9CC0D5;
+	font-size: 11px;
+}
+#forumbitForumStatsDiscussions {
+	color: #7DB9FA;
+	font-weight: bold;
+}
+#forumbitForumStatsMessages {
+	color: #7DB9FA;
+	font-weight: bold;
+}
+.forumbitIcon {
+	float: left;
+	padding: 10px;
+}
+#forumbitForumTitle {
+	font-size: 14pt;
+	margin-top: 12px;
+	position: absolute;
+}
+#forumbitForumDescription {
+	display: none;
+}
+#forumbitForumModlist {}
+#forumbitForumSubforums {}
+#forumbitLastpost {
+float: right;
+width: 190px;
+margin: 10px;
+padding: 2px 10px;
+background-color: #FFF;
+border: 1px solid #F8F8F8;
+border-radius: 4px;
+line-height: 14px;
+box-shadow: inset 0px 20px 20px #FDFDFD;
+}
+#forumbitLastpostSubject {
+	font-size: 12px;
+	color: #5C95BB;
+}
+#forumbitLastpostProfilelink {
+	display: inline-block;
+	font-size: 8pt;
+}
+#forumbitLastpostDate {
+	display: inline-block;
+	font-size: 8pt;
+	color: #ADADAD;
+}
+#forumbitLine {
+	height: 1px;
+	background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, .1), rgba(0, 0, 0, 0));
+	background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, .1), rgba(0, 0, 0, 0));
+	background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, .1), rgba(0, 0, 0, 0));
+	background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, .1), rgba(0, 0, 0, 0));
+	border: 0;
+	margin-top: 13px;
+}
+
+
+
+
+/* ### USER CONTROL PANEL ### */
+.usercpNav {
+	min-height: 20px;
+	padding: 19px;
+	margin-bottom: 20px;
+	background-color: #F5F5F5;
+	border: 1px solid #E3E3E3;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+	width: 200px;
+}
+
+.usercpNavHeader {
+	display: block;
+	padding: 3px 15px;
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 20px;
+	color: #999;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	text-transform: uppercase;
+}
+
+.usercp_nav_item {
+	display: block;
+	padding: 1px 0 1px 23px;
+}
+
+.usercp_nav_item:hover {
+	background-color: red;
+}
+
+.usercp_nav_composepm {
+	background: url(images/usercp/composepm.gif) no-repeat left center;
+}
+
+.usercp_nav_pmfolder {
+	background: url(images/usercp/pmfolder.gif) no-repeat left center;
+}
+
+.usercp_nav_sub_pmfolder {
+	padding-left: 40px;
+	background: url(images/usercp/sub_pmfolder.gif) no-repeat left center;
+}
+
+.usercp_nav_trash_pmfolder {
+	padding-left: 40px;
+	background: url(images/usercp/trash_pmfolder.gif) no-repeat left center;
+}
+
+.usercp_nav_pmtracking {
+	background: url(images/usercp/pmtracking.gif) no-repeat left center;
+}
+
+.usercp_nav_pmfolders {
+	background: url(images/usercp/editfolders.gif) no-repeat left center;
+}
+
+.usercp_nav_profile {
+	background: url(images/usercp/profile.gif) no-repeat left center;
+}
+
+.usercp_nav_email {
+	padding-left: 40px;
+	background: url(images/usercp/email.gif) no-repeat left center;
+}
+
+.usercp_nav_password {
+	padding-left: 40px;
+	background: url(images/usercp/password.gif) no-repeat left center;
+}
+
+.usercp_nav_username {
+	padding-left: 40px;
+	background: url(images/usercp/username.gif) no-repeat left center;
+}
+
+.usercp_nav_editsig {
+	padding-left: 40px;
+	background: url(images/usercp/editsig.gif) no-repeat left center;
+}
+
+.usercp_nav_avatar {
+	padding-left: 40px;
+	background: url(images/usercp/avatar.gif) no-repeat left center;
+}
+
+.usercp_nav_options {
+	background: url(images/usercp/options.gif) no-repeat left center;
+}
+
+.usercp_nav_usergroups {
+	background: url(images/usercp/usergroups.gif) no-repeat left center;
+}
+
+.usercp_nav_editlists {
+	background: url(images/usercp/editlists.gif) no-repeat left center;
+}
+
+.usercp_nav_attachments {
+	background: url(images/usercp/attachments.gif) no-repeat left center;
+}
+
+.usercp_nav_drafts {
+	background: url(images/usercp/drafts.gif) no-repeat left center;
+}
+
+.usercp_nav_subscriptions {
+	background: url(images/usercp/subscriptions.gif) no-repeat left center;
+}
+
+.usercp_nav_fsubscriptions {
+	background: url(images/usercp/fsubscriptions.gif) no-repeat left center;
+}
+
+.usercp_nav_notepad {
+	background: url(images/usercp/notepad.gif) no-repeat left center;
+}
+
+.usercp_nav_viewprofile {
+	background: url(images/usercp/viewprofile.gif) no-repeat left center;
+}
+
+.usercp_nav_home {
+	background: url(images/usercp/home.gif) no-repeat left center;
+}
+
+.usercp_notepad {
+	width: 99%;
+}
+
+.usercp_container {
+	margin: 5px;
+	padding: 8px;
+	border:1px solid #CCCCCC;
+}
+
+
+
+
+/* ### FOOTER### */
+.footer {
+	text-align: center;
+	padding: 30px 0;
+	margin-top: 70px;
+}
+.footer-links li {
+	display: inline;
+	padding: 0 2px;
+}
+
+
+
+/* ### HEADER ### */
+
+
+
+/* # BANNER # */
+.jumbotron {
+	margin-top: 41px;
+	margin-left: -8px;
+	padding: 4px 0px;
+	color: #FFF;
+	text-align: center;
+	background: #175699;
+	background: -moz-linear-gradient(45deg, #3D6CB3 0%, #10195E 100%);
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#3D6CB3), color-stop(100%,#10195E));
+	background: -webkit-linear-gradient(45deg, #3D6CB3 0%,#10195E 100%);
+	background: -o-linear-gradient(45deg, #3D6CB3 0%,#10195E 100%);
+	background: -ms-linear-gradient(45deg, #3D6CB3 0%,#10195E 100%);
+	background: linear-gradient(45deg, #3D6CB3 0%,#10195E 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#020031', endColorstr='#6d3353',GradientType=1 );
+	-webkit-box-shadow: inset 0 3px 7px rgba(0, 0, 0, .2), inset 0 -3px 7px rgba(0, 0, 0, .2);
+	-moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+	box-shadow: inset 0 3px 7px rgba(0, 0, 0, .2), inset 0 -3px 7px rgba(0, 0, 0, .2);
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	text-align: left;
+}
+.jumbotron:after {
+	content: '';
+	display: block;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	background: url(http://twitter.github.io/bootstrap/assets/img/bs-docs-masthead-pattern.png) repeat center center;
+	opacity: .4;
+}
+
+.masthead {
+	padding: 70px 0 80px;
+	margin-bottom: 0;
+	color: #000;
+}
+
+/* ### Bootstrap Overwrite ### */
+.btn {
+background-image: none;
+  background-image: none;
+  background-image: none;
+  background-image: none;
+  background-image: none;
+  background-image: none;
+  background-repeat: no-repeat;
+}
+
+
+/* ### BREADCRUMB ### */
+.navigation {
+padding: 8px 0px;
+margin: 0 0 17px;
+list-style: none;
+background-color: #F5F5F5;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+margin-top: 39px;
+box-shadow: inset 0px 20px 41px #FCFCFC;
+border: 1px solid #F5F5F5;
+}
+
+.navigation a {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.navigation a:link {
+	text-decoration: none;
+	text-shadow: 0 1px 0 #FFF;
+}
+
+.navigation a:visited {
+	text-decoration: none;
+}
+
+.navigation a:hover, .navigation a:active {
+	text-decoration: none;
+}
+
+.navigation .active {
+	color: #999;
+	margin-left: 10px;
+}
+
+.divider {
+	color: #CCC;
+}
+
+
+
+
+
+
+a {
+color: #08C;
+text-decoration: none;
+font-family: 'Open Sans', sans-serif;
+}
+
+a:hover, a:focus {
+	color: #005580;
+	text-decoration: underline;
+}
+
+
+
+/ ### BUILDING BLOCKS ### */
+.threadListHeader.title, .threadListHeader.starter, .threadListHeader.replies, .threadListHeader.views, .threadListHeader.lastPost {
+display: table-cell;
+vertical-align: middle;
+}
+
+
+body {
+font-family: 'Open Sans', sans-serif;
+font-size: 14px;
+line-height: 20px;
+color: #747474;
+overflow-y: scroll;
+overflow-x: hidden;
+}
+
+.container {}
+
+#content {
+margin-top: 0px;
+}
+table {
+	color: #000000;
+	font-family: Verdana, Arial, Sans-Serif;
+}
+
+.tborder {
+	margin: auto auto;
+	border: 1px solid #0F5C8E;
+	background-color: #FFF;
+	border: 1px solid #DDD;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.thead {
+	color: #000;
+	background-color: #F5F5F5;
+	height: 36px;
+}
+
+.thead a:link {
+	color: #000;
+	text-decoration: none;
+}
+
+.thead a:visited {
+	color: #000;
+	text-decoration: none;
+}
+
+.thead a:hover, .thead a:active {
+	color: #000;
+	text-decoration: underline;
+}
+
+.tcat {
+	color: #000;
+	font-size: 12px;
+}
+
+.tcat a:link {
+	color: #000000;
+}
+
+.tcat a:visited {
+	color: #000000;
+}
+
+.tcat a:hover, .tcat a:active {
+	color: #000000;
+}
+
+.trow1 {
+}
+
+.trow2 {
+}
+
+.trow_shaded {
+background-color: red;
+}
+
+.trow_selected td {
+background-color: #FCFCFC;
+}
+
+.trow_sep {
+background: #FAFAFA;
+border-bottom: 1px solid #F0F0F0;
+color: #C2C2C2;
+font-size: 8pt;
+box-shadow: 0 4px 8px #F8F8F8, inset 0 3px 10px #F7F7F7;
+}
+
+.tfoot {
+	background: #026CB1 url(images/thead_bg.gif) top left repeat-x;
+	color: #ffffff;
+}
+
+.tfoot a:link {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.tfoot a:visited {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.tfoot a:hover, .tfoot a:active {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.bottommenu {
+	color: #C7C7C7;
+	padding: 10px;
+	margin-top: 130px;
+	margin: auto;
+}
+
+.smalltext {
+	font-size: 11px;
+}
+
+.largetext {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+textarea {
+	background: #ffffff;
+	color: #000000;
+	border: 1px solid #0f5c8e;
+	padding: 2px;
+	font-family: Verdana, Arial, Sans-Serif;
+	line-height: 1.4;
+	font-size: 13px;
+}
+
+select {
+background: #FFF;
+border: 1px solid #E4E4E4;
+}
+
+.editor {
+	background: #f1f1f1;
+	border: 1px solid #ccc;
+}
+
+.editor_control_bar {
+	background: #fff;
+	border: 1px solid #0f5c8e;
+}
+
+.autocomplete {
+	background: #fff;
+	border: 1px solid #000;
+	color: black;
+}
+
+.autocomplete_selected {
+	background: #adcee7;
+	color: #000;
+}
+
+.popup_menu {
+	background: #ccc;
+	border: 1px solid #000;
+}
+
+.popup_menu .popup_item {
+	background: #fff;
+	color: #000;
+}
+
+.popup_menu .popup_item:hover {
+	background: #C7DBEE;
+	color: #000;
+}
+
+.trow_reputation_positive {
+	background: #ccffcc;
+}
+
+.trow_reputation_negative {
+	background: #ffcccc;
+}
+
+.reputation_positive {
+	color: green;
+}
+
+.reputation_neutral {
+	color: #444;
+}
+
+.reputation_negative {
+	color: red;
+}
+
+.invalid_field {
+	border: 1px solid #f30;
+	color: #f30;
+}
+
+.valid_field {
+	border: 1px solid #0c0;
+}
+
+.validation_error {
+	background: url(images/invalid.gif) no-repeat center left;
+	color: #f30;
+	margin: 5px 0;
+	padding: 5px;
+	font-weight: bold;
+	font-size: 11px;
+	padding-left: 22px;
+}
+
+.validation_success {
+	background: url(images/valid.gif) no-repeat center left;
+	color: #00b200;
+	margin: 5px 0;
+	padding: 5px;
+	font-weight: bold;
+	font-size: 11px;
+	padding-left: 22px;
+}
+
+.validation_loading {
+	background: url(images/spinner.gif) no-repeat center left;
+	color: #555;
+	margin: 5px 0;
+	padding: 5px;
+	font-weight: bold;
+	font-size: 11px;
+	padding-left: 22px;
+}
+
+/* Additional CSS (Master) */
+img {
+	border: none;
+}
+
+.clear {
+	clear: both;
+}
+
+.hidden {
+	display: none;
+	float: none;
+	width: 1%;
+}
+
+.hiddenrow {
+	display: none;
+}
+
+.selectall {
+	background-color: #FFFBD9;
+	font-weight: bold;
+	text-align: center;
+}
+
+.float_left {
+	float: left;
+}
+
+.float_right {
+	float: right;
+}
+
+.menu ul {
+	list-style: none;
+	margin: 0;
+}
+
+.menu li {
+	display: inline;
+	padding-left: 5px;
+}
+
+.menu img {
+	padding-right: 5px;
+	vertical-align: top;
+}
+
+#panel .links {
+	margin: 0;
+	float: right;
+}
+
+.expcolimage {
+	display: none;
+}
+
+img.attachment {
+	border: 1px solid #E9E5D7;
+	padding: 2px;
+}
+
+hr {
+	background-color: #000000;
+	color: #000000;
+	height: 1px;
+	border: 0px;
+}
+
+#copyright {
+	font: 11px Verdana, Arial, Sans-Serif;
+	margin: 0;
+	padding: 10px 0 0 0;
+}
+
+#debug {
+	float: right;
+	text-align: right;
+	margin-top: 0;
+}
+
+blockquote {
+margin: 0;
+}
+
+blockquote cite {
+font-style: normal;
+display: block;
+margin: 3px 0;
+font-size: 8pt;
+color: #AFAFAF;
+}
+
+blockquote cite span {
+	float: right;
+	font-weight: normal;
+}
+
+blockquote cite span.highlight {
+	float: none;
+	font-weight: bold;
+	padding-bottom: 0;
+}
+
+
+.codeblock .title {
+border-bottom: 1px solid #EBEBEB;
+font-weight: bold;
+margin: 4px 0;
+font-size: 8pt;
+}
+
+.codeblock code {
+	overflow: auto;
+	height: auto;
+	max-height: 200px;
+	display: block;
+	font-family: Monaco, Consolas, Courier, monospace;
+	font-size: 13px;
+}
+
+.subforumicon {
+	border: 0;
+	vertical-align: middle;
+}
+
+.separator {
+	margin: 5px;
+	padding: 0;
+	height: 0px;
+	font-size: 1px;
+	list-style-type: none;
+}
+
+form {
+	margin: 0;
+	padding: 0;
+}
+
+.popup_menu .popup_item_container {
+	margin: 1px;
+	text-align: left;
+}
+
+.popup_menu .popup_item {
+	display: block;
+	padding: 3px;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.popup_menu a.popup_item:hover {
+	text-decoration: none;
+}
+
+.autocomplete {
+	text-align: left;
+}
+
+.subject_new {
+	font-weight: bold;
+}
+
+.highlight {
+	background: #FFFFCC;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+.pm_alert {
+	background: #FFF6BF;
+	border: 1px solid #FFD324;
+	text-align: center;
+	padding: 5px 20px;
+	margin-bottom: 15px;
+	font-size: 11px;
+}
+
+.red_alert {
+	background: #FBE3E4;
+	border: 1px solid #A5161A;
+	color: #A5161A;
+	text-align: center;
+	padding: 5px 20px;
+	margin-bottom: 15px;
+	font-size: 11px;
+}
+
+.high_warning {
+	color: #CC0000;
+}
+
+.moderate_warning {
+	color: #F3611B;
+}
+
+.low_warning {
+	color: #AE5700;
+}
+
+div.error {
+	padding: 5px 10px;
+	border-top: 2px solid #FFD324;
+	border-bottom: 2px solid #FFD324;
+	background: #FFF6BF;
+	font-size: 12px;
+}
+
+div.error p {
+	margin: 0;
+	color: #000;
+	font-weight: normal;
+}
+
+div.error p em {
+	font-style: normal;
+	font-weight: bold;
+	padding-left: 24px;
+	display: block;
+	color: #C00;
+	background: url(images/error.gif) no-repeat 0;
+}
+
+div.error ul {
+	margin-left: 24px;
+}
+
+.online {
+	color: #15A018;
+}
+
+.offline {
+	color: #C7C7C7;
+}
+
+
+
+.thread_legend, .thread_legend dd {
+	margin: 0;
+	padding: 0;
+}
+
+.thread_legend dd {
+	padding-bottom: 4px;
+	margin-right: 15px;
+}
+
+.thread_legend img {
+	margin-right: 4px;
+	vertical-align: bottom;
+}
+
+.forum_legend, .forum_legend dt, .forum_legend dd {
+	margin: 0;
+	padding: 0;
+}
+
+.forum_legend dd {
+	float: left;
+	margin-right: 10px;
+}
+
+.forum_legend dt {
+	margin-right: 10px;
+	float: left;
+}
+
+.success_message {
+	color: #00b200;
+	font-weight: bold;
+	font-size: 10px;
+	margin-bottom: 10px;
+}
+
+.error_message {
+	color: #C00;
+	font-weight: bold;
+	font-size: 10px;
+	margin-bottom: 10px;
+}
+
+
+.post_content {
+	padding: 5px 10px;
+}
+
+.quick_jump {
+	background: url(images/jump.gif) no-repeat 0;
+	width: 13px;
+	height: 13px;
+	padding-left: 13px; /* amount of padding needed for image to fully show */
+	vertical-align: middle;
+	border: none;
+}
+
+.repbox {
+	font-size:16px;
+	font-weight: bold;
+	padding:5px 7px 5px 7px;
+}
+
+._neutral {
+	background-color:#FAFAFA;
+	color: #999999;
+	border:1px solid #CCCCCC;
+}
+
+._minus {
+	background-color: #FDD2D1;
+	color: #CB0200;
+	border:1px solid #980201;
+}
+
+._plus {
+	background-color:#E8FCDC;
+	color: #008800;
+	border:1px solid #008800;
+}
+
+.pagination_breadcrumb {
+	background-color: #f5f5f5;
+	border: 1px solid #fff;
+	outline: 1px solid #ccc;
+	padding: 5px;
+	margin-top: 5px;
+	font-weight: normal;
+	white-space: nowrap;
+}
+
+.pagination_breadcrumb_link {
+	vertical-align: middle;
+	cursor: pointer;
+}
+		]]>
+		</stylesheet>
+		<stylesheet name="modcp.css" attachedto="modcp.php" version="1609"><![CDATA[.modcp_nav_item {
+	display: block;
+	padding: 1px 0 1px 23px;
+}
+
+.modcp_nav_home {
+	background: url(images/modcp/home.gif) no-repeat left center;
+}
+
+.modcp_nav_announcements {
+	background: url(images/modcp/announcements.gif) no-repeat left center;
+}
+
+.modcp_nav_reports {
+	background: url(images/modcp/reports.gif) no-repeat left center;
+}
+
+.modcp_nav_modqueue {
+	background: url(images/modcp/modqueue.gif) no-repeat left center;
+}
+
+.modcp_nav_modlogs {
+	background: url(images/modcp/modlogs.gif) no-repeat left center;
+}
+
+.modcp_nav_editprofile {
+	background: url(images/modcp/editprofile.gif) no-repeat left center;
+}
+
+.modcp_nav_banning {
+	background: url(images/modcp/banning.gif) no-repeat left center;
+}
+
+.modcp_nav_warninglogs {
+	background: url(images/modcp/warninglogs.gif) no-repeat left center;
+}
+
+.modcp_nav_ipsearch {
+	background: url(images/modcp/ipsearch.gif) no-repeat left center;
+}
+
+.modqueue_message {
+	overflow: auto;
+	max-height: 250px;
+}
+
+.modqueue_controls {
+	width: 270px;
+	float: right;
+	text-align: center;
+	border: 1px solid #ccc;
+	background: #fff;
+	padding: 6px;
+	font-weight: bold;
+}
+
+.modqueue_controls label {
+	margin-right: 8px;
+}
+
+.label_radio_ignore, .label_radio_delete, .label_radio_approve {
+	font-weight: bold;
+}
+
+.modqueue_meta {
+	color: #444;
+	font-size: 95%;
+	margin-bottom: 8px;
+}
+
+.modqueue_mass {
+	list-style: none;
+	margin: 0;
+	width: 150px;
+	padding: 0;
+}
+
+.modqueue_mass li {
+	margin-bottom: 4px;
+	padding: 0;
+}
+
+.modqueue_mass li a {
+	display: block;
+	padding: 4px;
+	border: 1px solid transparent;
+}
+
+.modqueue_mass li a:hover {
+	background: #efefef;
+	border: 1px solid #ccc;
+	text-decoration: none;
+}]]>
+		</stylesheet>
+		<stylesheet name="star_ratings.css" attachedto="forumdisplay.php|showthread.php" version="1609"><![CDATA[.star_rating,
+.star_rating li a:hover,
+.star_rating .current_rating {
+	background: url(images/star_rating.gif) left -1000px repeat-x;
+	vertical-align: middle;
+}
+
+.star_rating {
+	position: relative;
+	width:80px;
+	height:16px;
+	overflow: hidden;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	background-position: left top;
+}
+
+td .star_rating {
+	margin: auto;
+}
+
+.star_rating li {
+	display: inline;
+}
+
+.star_rating li a,
+.star_rating .current_rating {
+	position: absolute;
+	text-indent: -1000px;
+	height: 16px;
+	line-height: 16px;
+	outline: none;
+	overflow: hidden;
+	border: none;
+	top:0;
+	left:0;
+}
+
+.star_rating_notrated li a:hover {
+	background-position: left bottom;
+}
+
+.star_rating li a.one_star {
+	width:20%;
+	z-index:6;
+}
+
+.star_rating li a.two_stars {
+	width:40%;
+	z-index:5;
+}
+
+.star_rating li a.three_stars {
+	width:60%;
+	z-index:4;
+}
+
+.star_rating li a.four_stars {
+	width:80%;
+	z-index:3;
+}
+
+.star_rating li a.five_stars {
+	width:100%;
+	z-index:2;
+}
+
+.star_rating .current_rating {
+	z-index:1;
+	background-position: left center;
+}
+
+.star_rating_success, .success_message {
+	color: #00b200;
+	font-weight: bold;
+	font-size: 10px;
+	margin-bottom: 10px;
+}
+
+.inline_rating {
+	float: left;
+	vertical-align: middle;
+	padding-right: 5px;
+}]]>
+		</stylesheet>
+		<stylesheet name="showthread.css" attachedto="showthread.php" version="1609"><![CDATA[ul.thread_tools, ul.thread_tools li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+ul.thread_tools li {
+	padding-left: 26px;
+	padding-bottom: 4px;
+	margin-bottom: 3px;
+	font-size: 11px;
+}
+
+ul.thread_tools li.printable {
+	background: url(images/printable.gif) no-repeat 0px 0px;
+}
+
+ul.thread_tools li.sendthread {
+	background: url(images/send.gif) no-repeat 0px 0px;
+}
+
+ul.thread_tools li.subscription_add {
+	background: url(images/subscribe.gif) no-repeat 0px 0px;
+}
+
+ul.thread_tools li.subscription_remove {
+	background: url(images/unsubscribe.gif) no-repeat 0px 0px;
+}]]>
+		</stylesheet>
+	</stylesheets>
+	<templates>
+		<template name="htmldoctype" version="1609"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>]]></template>
+		<template name="headerinclude" version="1609"><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="alternate" type="application/rss+xml" title="{$lang->latest_threads} (RSS 2.0)" href="{$mybb->settings['bburl']}/syndication.php" />
+<link rel="alternate" type="application/atom+xml" title="{$lang->latest_threads} (Atom 1.0)" href="{$mybb->settings['bburl']}/syndication.php?type=atom1.0" />
+<meta http-equiv="Content-Type" content="text/html; charset={$charset}" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<script type="text/javascript" src="{$mybb->settings['bburl']}/jscripts/prototype.js?ver=1603"></script>
+<script type="text/javascript" src="{$mybb->settings['bburl']}/jscripts/general.js?ver=1603"></script>
+<script type="text/javascript" src="{$mybb->settings['bburl']}/jscripts/popup_menu.js?ver=1600"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="{$mybb->settings['bburl']}/jscripts/bootstrap.js"></script>
+<script type="text/javascript" src="{$mybb->settings['bburl']}/jscripts/jnavigate.jquery.min.js"></script>
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" type="text/css" href="/images/openskin/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="/images/openskin/css/bootstrap-responsive.min.css" />
+{$stylesheets}
+
+<script type="text/javascript">
+<!--
+	var cookieDomain = "{$mybb->settings['cookiedomain']}";
+	var cookiePath = "{$mybb->settings['cookiepath']}";
+	var cookiePrefix = "{$mybb->settings['cookieprefix']}";
+	var deleteevent_confirm = "{$lang->deleteevent_confirm}";
+	var removeattach_confirm = "{$lang->removeattach_confirm}";
+	var loading_text = '{$lang->ajax_loading}';
+	var saving_changes = '{$lang->saving_changes}';
+	var use_xmlhttprequest = "{$mybb->settings['use_xmlhttprequest']}";
+	var my_post_key = "{$mybb->post_code}";
+	var imagepath = "{$theme['imgdir']}";
+// -->
+</script>
+
+    <script>
+      
+		jQuery.noConflict();
+		jQuery(document).ready(function($) {
+        
+        // initialise jnavigate with 
+        // our internal and external
+        // trigger classes
+        $(".containerRRR").jNavigate({
+		spinner: 'images/bootstrap/ajax-loader.gif',
+		extTrigger: '.jnav-ext', 
+		intTrigger: '.jnav-int'
+        });
+        
+      });
+     
+    </script>
+
+
+{$newpmmsg}]]></template>
+		<template name="nav_sep" version="1609"><![CDATA[<span class="divider"> / </span>]]></template>
+		<template name="nav_sep_active" version="1609"><![CDATA[<span class="divider"> / </span>]]></template>
+		<template name="nav" version="1609"><![CDATA[<div class="fluid-row span12 navigation">
+{$nav}{$activesep}{$activebit}
+</div>]]></template>
+		<template name="header" version="1609"><![CDATA[<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+    <a href="/" class="brand"><img alt="" src="images/openskin/logo.png" /></a>
+
+    <div class="nav-collapse collapse">
+        <ul class="nav">
+            <li class="navPortal"><a href="{$mybb->settings['bburl']}/portal.php" class="jnav-ext"> Portal</a></li>
+            
+            <li class="navForum"><a href="{$mybb->settings['bburl']}" class="jnav-ext">Forums</a></li>
+			
+			<li class="navMembers"><a href="{$mybb->settings['bburl']}/memberlist.php" class="jnav-ext">Members</a></li>
+			
+			<li class="dropdown">
+                <a id="drop1" href="" role="button" class="dropdown-toggle" data-toggle="dropdown">More<b class="caret"></b></a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+
+                	<li role="presentation"> <a role="menuitem" tabindex="-1" href="{$mybb->settings['bburl']}/misc.php?action=help">{$lang->toplinks_help}</a></li>
+
+                	<li role="presentation"><a role="menuitem" tabindex="-1" href="{$mybb->settings['bburl']}/calendar.php">{$lang->toplinks_calendar}</a></li>
+
+                	<li role="presentation" class="divider"></li>
+
+                	<li role="presentation"><a role="menuitem" tabindex="-1" href="{$mybb->settings['bburl']}/search.php">{$lang->toplinks_search}</a></li>
+
+                </ul>
+            </li>
+
+        </ul>
+		{$welcomeblock}
+    </div>
+    </div>
+  </div>
+</div>
+
+<a name="top" id="top"></a>
+
+
+<div id="header"><hr class="hidden" /></div>
+
+<hr class="hidden" />
+<br class="clear" />
+
+
+
+<div class="hidden-desktop"><div class="spacefix"></div></div>
+
+
+<div class="container" class="row-fluid">
+
+<div id="content">
+{$pm_notice}
+{$bannedwarning}
+{$bbclosedwarning}
+{$unreadreports}
+{$pending_joinrequests}
+<navigation>
+<br />]]></template>
+		<template name="showthread_newreply" version="1609"><![CDATA[<a href="newreply.php?tid={$tid}"><button type="button" class="btn btn-small btn-success">{$lang->post_reply_img}</button></a>]]></template>
+		<template name="footer" version="1609"><![CDATA[<div id="copyright">
+				<div id="debug"><debugstuff></div>
+				<!-- MyBB is free software developed and maintained by a volunteer community. 
+					 It would be much appreciated by the MyBB Group if you left the full copyright and "powered by" notice intact, 
+					 to show your support for MyBB.  If you choose to remove or modify the copyright below, 
+					 you may be refused support on the MyBB Community Forums.
+					 
+					 This is free software, support us and we'll support you. -->
+{$lang->powered_by} <a href="http://mybb.com/" target="_blank">MyBB{$mybbversion}</a>, &copy; 2002-{$copy_year} <a href="http://mybb.com/" target="_blank">MyBB Group</a>.<br />
+				<!-- End powered by -->
+				<br />
+<br class="clear" />
+<!-- The following piece of code allows MyBB to run scheduled tasks. DO NOT REMOVE -->{$task_image}<!-- End task image code -->
+{$auto_dst_detection}
+		</div>
+		</div>]]></template>
+		<template name="forumdisplay_threadlist" version="1609"><![CDATA[<!-- Forum Jump Button -->
+{$forumjump}
+
+<div class="forumDisplay">
+
+<!-- New Thread Button -->
+<div style="float:right;">{$newthread}</div>
+
+<!-- Forum Title -->
+<div class="title"><h2>{$foruminfo['name']}</h2></div>
+
+<!-- Forum Description -->
+{$foruminfo['description']}
+
+<!-- Pageination -->
+{$multipage}
+
+<!-- Add/Remove subscription -->
+<div class="subForum pull-right">
+	<a href="usercp2.php?action={$add_remove_subscription}subscription&amp;type=forum&amp;fid={$fid}&amp;my_post_key={$mybb->post_code}">{$add_remove_subscription_text}</a>{$clearstoredpass}
+</div>
+		
+<!-- Thread List -->
+<div class="threadList">
+{$inlinemod}
+{$selectall}
+	<table width="100%">
+		<div class="threadListHead">
+			{$inlinemodcol}
+			<div class="title" style="width: 66%;">
+				<div class="thread">
+					<a href="{$sorturl}&amp;sortby=subject&amp;order=asc">{$lang->thread}</a> {$orderarrow['subject']}
+					</div>
+					<div class="author pull-left">
+					<a href="{$sorturl}&amp;sortby=starter&amp;order=asc">{$lang->author}</a> {$orderarrow['starter']}
+				</div>
+			</div>
+<div class="stats" style="width: 13%;">
+				<a href="forumdisplay.php?fid=2&amp;datecut=0&amp;sortby=replies&amp;order=desc">Replies</a>  <a href="forumdisplay.php?fid=2&amp;datecut=0&amp;sortby=views&amp;order=desc" style="
+    margin-left: 46px;
+">Views</a> 
+			</div>
+			<div class="lastPost" style="width: 16%;">
+				<a href="{$sorturl}&amp;sortby=lastpost&amp;order=desc">{$lang->lastpost}</a> {$orderarrow['lastpost']}
+			</div>
+		</div>
+		{$announcementlist}
+		{$threads}
+	</table>
+		<div class="sortForm">
+			<form action="forumdisplay.php" method="get">
+			<input type="hidden" name="selectall" value="{$allselected}" />
+			<input type="hidden" name="fid" value="{$fid}" />
+			<select name="sortby">
+				<option value="subject" {$sortsel['subject']}>{$lang->sort_by_subject}</option>
+				<option value="lastpost" {$sortsel['lastpost']}>{$lang->sort_by_lastpost}</option>
+				<option value="starter" {$sortsel['starter']}>{$lang->sort_by_starter}</option>
+				<option value="started" {$sortsel['started']}>{$lang->sort_by_started}</option>
+				<option value="replies" {$sortsel['replies']}>{$lang->sort_by_replies}</option>
+				<option value="views" {$sortsel['views']}>{$lang->sort_by_views}</option>
+			</select>
+			<select name="order">
+				<option value="asc" {$ordersel['asc']}>{$lang->sort_order_asc}</option>
+				<option value="desc" {$ordersel['desc']}>{$lang->sort_order_desc}</option>
+			</select>
+			<select name="datecut">
+				<option value="1" {$datecutsel['1']}>{$lang->datelimit_1day}</option>
+				<option value="5" {$datecutsel['5']}>{$lang->datelimit_5days}</option>
+				<option value="10" {$datecutsel['10']}>{$lang->datelimit_10days}</option>
+				<option value="20" {$datecutsel['20']}>{$lang->datelimit_20days}</option>
+				<option value="50" {$datecutsel['50']}>{$lang->datelimit_50days}</option>
+				<option value="75" {$datecutsel['75']}>{$lang->datelimit_75days}</option>
+				<option value="100" {$datecutsel['100']}>{$lang->datelimit_100days}</option>
+				<option value="365" {$datecutsel['365']}>{$lang->datelimit_lastyear}</option>
+				<option value="9999" {$datecutsel['9999']}>{$lang->datelimit_beginning}</option>
+			</select>
+			{$gobutton}
+			</form>
+		</div>		
+</div>
+
+<!-- Thread Sorting Options Toggle Buton -->
+<div class="sortFormToggle"> Thread Display Options </div>
+
+<!-- Pagination -->
+{$multipage}
+
+<!-- New Thread Button -->
+<div class="float_right" style="margin-top: -24px;"> {$newthread} </div>
+
+<!-- Mark Thread Read Button -->
+<div class="markRead"><a href="misc.php?action=markread&amp;fid={$fid}{$post_code_string}">{$lang->markforum_read}</a></div>
+
+<!-- Search Forum -->
+{$searchforum}
+
+<!-- Loads Inline Edit JS -->
+{$inline_edit_js}
+</div>]]></template>
+		<template name="member_login" version="1609"><![CDATA[<html>
+<head>
+<title>{$mybb->settings['bbname']} - {$lang->login}</title>
+{$headerinclude}
+</head>
+<body>
+{$header}
+<div class="row-fluid">
+
+      <form class="form-signin span4">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <input type="text" class="input-block-level" placeholder="Email address">
+        <input type="password" class="input-block-level" placeholder="Password">
+        <label class="checkbox">
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+        <button class="btn btn-large btn-primary" type="submit">Sign in</button>
+      </form>
+
+
+</div>
+<br />
+{$inline_errors}
+{$member_loggedin_notice}
+
+{$footer}
+</body>
+</html>]]></template>
+		<template name="header_welcomeblock_member" version="1609"><![CDATA[<div class="btn-group pull-right hidden-phone" style="margin-top: 9px;">
+                <a href="member.php?action=profile&amp;uid={$mybb->user['uid']}"><button class="btn btn-mini" id="userPanelFix">{$mybb->user['username']} </button></a>
+                <button class="btn btn-mini dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="{$mybb->settings['bburl']}/usercp.php">Profile Settings</a></li>
+                  <li><a href="{$mybb->settings['bburl']}/member.php?action=logout&amp;logoutkey={$mybb->user['logoutkey']}">{$lang->welcome_logout}</a></li>
+                  {$modcplink}
+                  {$admincplink}
+                </ul>
+              </div>]]></template>
+		<template name="postbit" version="1609"><![CDATA[{$ignore_bit}
+<div class="fluid-row">
+
+		<div id="postbit">
+			<div id="postbitHeader">
+				<div class="pull-left">
+					<div id="postbitAvatar">
+						{$post['useravatar']}
+					</div>
+				</div>
+				<div id="postbitUsername">
+					{$post['profilelink']}
+				</div>
+				<div id="postbitUsertitle">
+					{$post['usertitle']}
+				</div>
+				<div class="pull-right">	
+					<div id="postbitPosturl">
+						{$post['posturl']}
+					</div>	
+				</div>
+			</div>		
+			<div class="post_body" id="pid_{$post['pid']}">
+				{$post['message']}
+			</div>				
+		</div>
+		<div id="postbitFoot">
+			<div class="pull-left">
+				
+			</div>
+			<div class="pull-right">
+				{$post['button_quote']}
+			</div>
+		</div>
+
+</div>]]></template>
+		<template name="postbit_quote" version="1609"><![CDATA[<a href="newreply.php?tid={$tid}&amp;pid={$post['pid']}" id="postbitQuote">Quote</a>]]></template>
+		<template name="postbit_posturl" version="1609"><![CDATA[<a href="{$post['postlink']}#pid{$post['pid']}" id="postbitPostcounter">#{$postcounter}</a>{$post['inlinecheck']}]]></template>
+		<template name="forumdisplay_subforums" version="1609"><![CDATA[{$forums}]]></template>
+		<template name="index_boardstats" version="1609"><![CDATA[<div id="portalSidebar">
+<div class="portalSidebarHead">{$lang->boardstats}</div>
+{$whosonline}
+{$birthdays}
+{$forumstats}
+</div>]]></template>
+		<template name="usercp_nav" version="1609"><![CDATA[<div class="usercpNav">
+<div id="usercpNavTitle">{$lang->ucp_nav_menu}</div>
+
+
+		<div class="smalltext"><a href="usercp.php" class="usercp_nav_item usercp_nav_home">{$lang->ucp_nav_home}</a></div>
+
+{$usercpmenu}
+</div>]]></template>
+		<template name="usercp_nav_messenger" version="1609"><![CDATA[<span class="usercpNavHeader ">{$lang->ucp_nav_messenger}</span>
+
+
+
+	<a href="private.php?action=send" class="usercp_nav_item usercp_nav_composepm">{$lang->ucp_nav_compose}</a>
+
+			{$folderlinks}
+
+
+	<a href="private.php?action=tracking" class="usercp_nav_item usercp_nav_pmtracking usercpNavItem">{$lang->ucp_nav_tracking}</a>
+	<a href="private.php?action=folders" class="usercp_nav_item usercp_nav_pmfolders usercpNavItem">{$lang->ucp_nav_edit_folders}</a>]]></template>
+		<template name="usercp" version="1609"><![CDATA[<html>
+<head>
+<title>{$lang->user_cp}</title>
+{$headerinclude}
+</head>
+<body>
+{$header}
+<table width="100%" border="0" align="center">
+<tr>
+{$usercpnav}
+<td valign="top">
+<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+<tr>
+<td class="thead" colspan="{$colspan}"><strong>{$lang->account_summary}</strong></td>
+</tr>
+<tr>
+{$avatar}
+<td class="trow2">
+<span class="largetext">{$username}</span><br />
+<strong>{$lang->postnum}</strong> <a href="search.php?action=finduser&amp;uid={$mybb->user['uid']}">{$mybb->user['posts']}</a> {$lang->posts_day}<br />
+{$reputation}
+<strong>{$lang->email}</strong> {$mybb->user['email']}<br />
+<strong>{$lang->registration_date}</strong> {$regdate}<br />
+<strong>{$lang->primary_usergroup}</strong> {$usergroup}<br />
+{$referral_info}
+</td>
+</tr>
+</table>
+{$latest_subscribed}
+{$latest_threads}
+{$latest_warnings}
+{$user_notepad}
+</td>
+</tr>
+</table>
+{$footer}
+</body>
+</html>]]></template>
+		<template name="usercp_nav_profile" version="1609"><![CDATA[<div class="usercpNavHeader">{$lang->ucp_nav_profile}</div>
+
+<div class="trow1 smalltext">
+		<div><a href="usercp.php?action=profile" class="usercp_nav_item usercp_nav_profile">{$lang->ucp_nav_edit_profile}</a></div>
+		{$changenameop}
+		<div><a href="usercp.php?action=password" class="usercp_nav_item usercp_nav_password">{$lang->ucp_nav_change_pass}</a></div>
+		<div><a href="usercp.php?action=email" class="usercp_nav_item usercp_nav_email">{$lang->ucp_nav_change_email}</a></div>
+		<div><a href="usercp.php?action=avatar" class="usercp_nav_item usercp_nav_avatar">{$lang->ucp_nav_change_avatar}</a></div>
+		{$changesigop}<!-- profilepic -->
+	</div>
+	<div class="smalltext"><a href="usercp.php?action=options" class="usercp_nav_item usercp_nav_options">{$lang->ucp_nav_edit_options}</a>]]></template>
+		<template name="usercp_nav_misc" version="1609"><![CDATA[<div class="usercpNavHeader">{$lang->ucp_nav_misc}</span>
+
+
+
+	<a href="usercp.php?action=usergroups" class="usercp_nav_item usercp_nav_usergroups">{$lang->ucp_nav_usergroups}</a>
+	<a href="usercp.php?action=editlists" class="usercp_nav_item usercp_nav_editlists">{$lang->ucp_nav_editlists}</a>
+	<a href="usercp.php?action=attachments" class="usercp_nav_item usercp_nav_attachments">{$lang->ucp_nav_attachments}</a>
+	{$draftstart}<a href="usercp.php?action=drafts" class="usercp_nav_item usercp_nav_drafts">{$lang->ucp_nav_drafts} {$draftcount}</a>{$draftend}
+	<a href="usercp.php?action=subscriptions" class="usercp_nav_item usercp_nav_subscriptions">{$lang->ucp_nav_subscribed_threads}</a>
+	<a href="usercp.php?action=forumsubscriptions" class="usercp_nav_item usercp_nav_fsubscriptions">{$lang->ucp_nav_forum_subscriptions}</a>
+	<a href="{$profile_link}" class="usercp_nav_item usercp_nav_viewprofile">{$lang->ucp_nav_view_profile}</a>]]></template>
+		<template name="member_profile" version="1609"><![CDATA[<html>
+<head>
+  <title>{$mybb->settings['bbname']} - {$lang->profile}</title>
+  {$headerinclude}
+  <script type="text/javascript">
+    jQuery.noConflict();
+    jQuery(document).ready(function($) {
+      $(".navMembers").addClass("active");
+    });     
+  </script>
+</head>
+<body>
+  {$header}
+  <h2>{$formattedname}</h2>
+  {$membdayage}
+
+  <div class="row-fluid">
+    <div class="span4">
+      <div style="width: 100%;padding: 2px;background: #FFF;border: 1px solid #CFCFCF;border-radius: 4px;">{$avatar}</div>
+    </div>  
+    <div class="span8">
+      {$usertitle}
+    </div>
+  </div>
+{$footer}
+</body>
+</html>]]></template>
+		<template name="multipage_prevpage" version="1609"><![CDATA[<a href="{$page_url}" class="pagination_previous">&laquo;</a>]]></template>
+		<template name="forumbit_depth1_cat" version="1609"><![CDATA[<div id="forumbitHeader"><a href="{$forum_url}" id="forumbitCategoryTitle">{$forum['name']}</a><div id="forumbitCategoryDescription">{$forum['description']}</div></div>
+
+{$sub_forums}]]></template>
+		<template name="forumbit_depth1_cat_subforum" version="1609"><![CDATA[<a href="{$forum_url}" id="forumbitForumTitle">{$forum['name']}</a><br />
+<span id="forumbitForumDescription">{$forum['description']}</span><br>
+{$sub_forums}]]></template>
+		<template name="forumbit_depth1_forum_lastpost" version="1609"><![CDATA[<div id="forumbitLastpost">
+<a href="{$lastpost_link}" title="{$full_lastpost_subject}"><div id="forumbitLaspostSubject">{$lastpost_subject}</div></a>
+<br />{$lastpost_date} {$lastpost_time} <br />  {$lastpost_profilelink}
+</div>]]></template>
+		<template name="index" version="1609"><![CDATA[<html>
+<head>
+<title>{$mybb->settings['bbname']}</title>
+{$headerinclude}
+<script type="text/javascript">
+<!--
+	lang.no_new_posts = "{$lang->no_new_posts}";
+	lang.click_mark_read = "{$lang->click_mark_read}";
+// -->
+</script>
+<script type="text/javascript">
+    jQuery.noConflict();
+	jQuery(document).ready(function($) {
+
+		// Initialize Bootstrap Tooltips for the Forum Description
+    	$('.forumbitForumDescription').tooltip();
+
+    	// Add active class to the Navbar button: Forums
+    	$(".navForum").addClass("active");
+    });
+</script>
+</head>
+<body>
+{$header}
+<div class="spacefixIndex visible-phone"></div>
+<div class="row-fluid">
+
+	<!-- Forumlist -->
+	<div class="span9 indexForumContainer">{$forums}</div>
+
+	<!-- Sidebar -->
+	<div class="span3">
+		<!-- Forum Statistics -->
+		{$boardstats}
+	</div>
+</div>
+</body>
+{$footer}
+</html>]]></template>
+		<template name="modcp_nav" version="1609"><![CDATA[{$lang->nav_menu}
+
+<div class="well span3" style="max-width: 340px; padding: 8px 0;">
+	<ul class="nav nav-list">
+		<li class="nav-header">Moderation Menu</li>
+		<li><a href="modcp.php" class=""><i class="icon-home"></i> {$lang->mcp_nav_home}</a></li>
+		<li class="nav-header">{$lang->mcp_nav_forums}</li>
+		<li><a href="modcp.php?action=announcements" class="">{$lang->mcp_nav_announcements}</a></li>
+		<li><a href="modcp.php?action=modqueue" class="">{$lang->mcp_nav_modqueue}</a></li>
+		<li><a href="modcp.php?action=reports" class="">{$lang->mcp_nav_reported_posts}</a></li>
+		<li><a href="modcp.php?action=modlogs" class="">{$lang->mcp_nav_modlogs}</a></li>
+		<li class="nav-header">{$lang->mcp_nav_users}</li>
+		<li><a href="modcp.php?action=finduser" class="">{$lang->mcp_nav_editprofile}</a></li>
+		<li><a href="modcp.php?action=banning" class="">{$lang->mcp_nav_banning}</a></li>
+		<li><a href="modcp.php?action=warninglogs" class="">{$lang->mcp_nav_warninglogs}</a></li>
+		<li><a href="modcp.php?action=ipsearch" class="">{$lang->mcp_nav_ipsearch}</a></li>
+	</ul>
+</div>]]></template>
+		<template name="forumbit_depth2_cat" version="1609"><![CDATA[<img src="{$theme['imgdir']}/{$lightbulb['folder']}.gif" alt="{$lightbulb['altonoff']}" title="{$lightbulb['altonoff']}" class="ajax_mark_read" id="mark_read_{$forum['fid']} forumbitIcon" /></div>
+<a href="{$forum_url}">{$forum['name']}</a>{$forum_viewers_text}<div class="smalltext">{$forum['description']}{$subforums}</div>
+{$threads}{$unapproved['unapproved_threads']}
+{$posts}{$unapproved['unapproved_posts']}
+{$lastpost}]]></template>
+		<template name="forumbit_depth2_forum" version="1609"><![CDATA[<div class="row-fluid" id="forumbitForumrow">
+	<div class="">
+		<img src="{$theme['imgdir']}/{$lightbulb['folder']}.png" alt="{$lightbulb['altonoff']}" title="{$lightbulb['altonoff']}" class="ajax_mark_read forumbitIcon" id="mark_read_{$forum['fid']}" />
+		<a href="{$forum_url}" data-toggle="tooltip" data-placement="right" title="" data-original-title="{$forum['description']}" class="forumbitForumDescription" id="forumbitForumTitle">{$forum['name']}</a>
+{$forum_viewers_text}
+		<div class="hidden-phone">{$lastpost}</div>
+		<br><div id="forumbitForumStats">
+			Discussions:<span id="forumbitForumStatsDiscussions"> {$threads}{$unapproved['unapproved_threads']}</span>
+			Messages:<span id="forumbitForumStatsMessages"> {$posts}{$unapproved['unapproved_posts']}</span>
+		</div>
+		
+		<div id="forumbitForumModlist">{$modlist}</div>
+		<div id="forumbitForumSubforums">{$subforums}</div>
+	</div>
+<div id="forumbitLine hidden-phone"></div>
+</div>]]></template>
+		<template name="showthread" version="1609"><![CDATA[<html>
+	<head>
+		<title>{$thread['subject']}</title>
+		{$headerinclude}
+		<script type="text/javascript">
+			<!--
+				var quickdelete_confirm = "{$lang->quickdelete_confirm}";
+			// -->
+		</script>
+		<script type="text/javascript" src="jscripts/thread.js?ver=1603"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$(".navForum").addClass("active");
+			});
+
+		</script>
+	</head>
+	<body>
+		{$header}
+		{$pollbox}
+		<div id="showthreadTitle">
+			{$thread['threadprefix']} <h3>{$thread['subject']}</h3>
+		</div>
+		{$multipage}
+		{$classic_header}
+		<div id="posts">
+			{$posts}
+		</div>
+
+		<br style="clear: both;" />
+		<div style="margin-top:-37px;"></div>
+		{$quickreply}
+		
+		{$search_thread}
+		{$multipage}
+		<div style="padding-top: 4px;" class="float_right">
+			{$newreply}
+		</div>
+		
+		{$threadexbox}
+		{$similarthreads}
+		<br />
+		<div id="showthreadSubscribe">
+			<div class="subscription_{$add_remove_subscription}">
+				<a href="usercp2.php?action={$add_remove_subscription}subscription&amp;tid={$tid}&amp;my_post_key={$mybb->post_code}">{$add_remove_subscription_text}</a>
+			</div>
+		</div>
+		<div class="float_right" style="text-align: right;">
+			{$moderationoptions}
+			{$forumjump}
+		</div>
+		<br style="clear: both;" />
+			{$usersbrowsing}
+			{$footer}
+	</body>
+</html>]]></template>
+		<template name="forumdisplay_thread" version="1609"><![CDATA[<tbody>
+	<tr class="forumdisplayThread">
+        <td width="65%" class="{$bgcolor}{$thread_type_class}">
+			{$prefix} 
+			{$modbit}
+			{$thread['threadprefix']}
+			<a href="{$thread['threadlink']}" class="forumDisplayThread {$inline_edit_class} {$new_class}" id="tid_{$inline_edit_tid}">{$thread['subject']}</a>
+			{$gotounread}
+			<br>
+			<div class="author smalltext">
+				{$thread['profilelink']}
+			</div>
+			{$thread['multipage']}
+		</td>
+        <td width="15%" class="{$bgcolor}{$thread_type_class}">
+			<div id="forumdisplayThreadStats" class="hidden-phone">
+				<span id="forumdisplayThreadReplies">Replies:</span> <a href="javascript:MyBB.whoPosted({$thread['tid']});">{$thread['replies']}</a>{$unapproved_posts} <br>
+				<span id="forumdisplayThreadViews">Views: </span>{$thread['views']}
+			</div>
+		</td>
+        <td width="20%" class="{$bgcolor}{$thread_type_class}">
+			<div class="pull-right lastPost">
+				<div class="pull-right">{$lastposterlink}</div><br>
+				<a href="{$thread['lastpostlink']}" data-toggle="tooltip" data-placement="left" title="" data-original-title="{$lang->lastpost}" class="date">{$lastpostdate} {$lastposttime}</a>
+				</div>
+		</td>
+    </tr>
+</tbody>]]></template>
+		<template name="postbit_avatar" version="1609"><![CDATA[<a href="{$post['profilelink_plain']}"><img src="{$post['avatar']}" alt="" {$avatar_width_height} id="postbitAvatar" /></a>]]></template>
+		<template name="forumbit_depth2_forum_lastpost" version="1609"><![CDATA[<div id="forumbitLastpost">
+	<a href="{$lastpost_link}" title="{$full_lastpost_subject}" ><span id="forumbitLastpostSubject">{$lastpost_subject}</span></a><br>
+	<div id="forumbitLastpostProfilelink">{$lastpost_profilelink}</div>
+	<div id="forumbitLastpostDate">{$lastpost_date} {$lastpost_time}</div>
+</div>]]></template>
+		<template name="index_stats" version="1609"><![CDATA[<div class="smalltext">
+{$lang->boardstats}
+
+{$lang->stats_posts_threads}<br />
+{$lang->stats_numusers}<br />
+{$lang->stats_newestuser}<br />
+{$lang->stats_mostonline}
+</div>]]></template>
+		<template name="forumdisplay_newthread" version="1609"><![CDATA[<a href="newthread.php?fid={$fid}"><button type="button" class="btn btn-small btn-success">{$lang->post_thread}</button></a>]]></template>
+		<template name="postbit_www" version="1609"><![CDATA[<a href="{$post['website']}" target="_blank">{$lang->postbit_website}</a>]]></template>
+		<template name="portal" version="1609"><![CDATA[<html>
+	<head>
+		<title>{$mybb->settings['bbname']}</title>
+		{$headerinclude}
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$(".navPortal").addClass("active");
+			});
+		</script>
+	</head>
+	<body>
+		{$header}
+		<div class="spacefixIndex hidden-desktop"></div>
+		<div class="row-fluid">
+			<div class="span9 portalAnnouncementContainer">
+				{$announcements}
+			</div>
+			<div class="span3">
+				{$welcome}
+				{$pms}
+				{$search}
+				{$stats}
+				{$whosonline}
+				{$latestthreads}
+			</div>
+		</div>
+		{$footer}
+	</body>
+</html>]]></template>
+		<template name="header_welcomeblock_member_admin" version="1609"><![CDATA[<li><a href="{$mybb->settings['bburl']}/{$config['admin_dir']}/index.php">{$lang->welcome_admin}</a></li>]]></template>
+		<template name="header_welcomeblock_member_moderator" version="1609"><![CDATA[<li class="divider"></li>
+<li><a href="{$mybb->settings['bburl']}/modcp.php">{$lang->welcome_modcp}</a></li>]]></template>
+		<template name="modcp" version="1609"><![CDATA[<html>
+<head>
+<title>{$mybb->settings['bbname']} - {$lang->modcp}</title>
+{$headerinclude}
+</head>
+<body>
+{$header}
+<div class="row-fluid">
+	{$modcp_nav}
+	<div class="span5">
+	<h3>{$lang->awaiting_moderation}</h3>
+		<table class="table table-striped">
+            <thead>
+                <tr>
+					<th>{$lang->type}</th>
+					<th>{$lang->number_awaiting}</th>
+					<th>{$lang->latest}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+					<td>{$lang->threads}</td>
+					<td>{$unapproved_threads}</td>
+					<td>{$latest_thread}</td>
+                </tr>
+                <tr>
+					<td>{$lang->posts}</td>
+					<td>{$unapproved_posts}</td>
+					<td>{$latest_post}</td>
+                </tr>
+                <tr>
+					<td>{$lang->attachments}</td>
+					<td>{$unapproved_attachments}</td>
+					<td>{$latest_attachment}</td>
+                </tr>
+            </tbody>
+        </table>
+	</div>
+
+	<div class="span5">			
+	<h3>{$lang->latest_5_modactions}</h3>
+		<table class="table table-striped">
+            <thead>
+                <tr>
+					<th>{$lang->username}</th>
+					<th>{$lang->number_awaiting}</th>
+					<th>{$lang->latest}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+					<td>{$lang->threads}</td>
+					<td>{$lang->date}</td>
+					<td>{$lang->action}</td>
+					<td>{$lang->information}</td>
+					<td>{$lang->ip}</td>
+                </tr>
+				{$modlogresults}
+            </tbody>
+        </table>
+	</div>
+
+
+	<div class="span5">
+	<h3>{$lang->bans_ending_soon}</h3>
+		<table class="table table-striped">
+            <thead>
+                <tr>
+					<th>{$lang->username}</th>
+					<th>{$lang->reason}</th>
+					<th>{$lang->ban_length}</th>
+					<th>{$lang->ban_bannedby}</th>
+                </tr>
+            </thead>
+			{$bannedusers}
+        </table>	
+	</div>
+	
+</div>	
+	
+	
+<form action="modcp.php" method="post">
+<input type="hidden" name="my_post_key" value="{$mybb->post_code}" />
+<input type="hidden" name="action" value="do_modnotes" />
+<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+<tr>
+<td class="thead" align="center" colspan="1"><strong>{$lang->moderator_notes}</strong></td>
+</tr>
+<tr>
+<td class="tcat"><span class="smalltext"><strong>{$lang->notes_public_all}</strong></span>
+</td>
+<tr>
+<td class="trow1"><textarea name="modnotes" style="width: 99%; height: 200px;" rows="5" cols="45">{$modnotes}</textarea></td>
+</tr>
+</table>
+<br />
+<div align="center"><input type="submit" class="button" name="notessubmit" value="{$lang->save_notes}" /></div>
+</form>
+</td>
+</tr>
+</table>
+{$footer}
+</body>
+</html>]]></template>
+		<template name="portal_announcement" version="1609"><![CDATA[<div id="portalAnnouncement">
+	<div id="portalAnnouncementHeader">
+		<a href="{$mybb->settings['bburl']}/{$announcement['threadlink']}"><h3>{$announcement['subject']}</h3></a>
+	</div>
+	<div id="portalAnnouncementPostedby">
+		<span class="smalltext">{$lang->posted_by} {$profilelink}  - {$anndate} {$anntime} {$numcomments}</span>
+	</div>
+	<div id="portalAnnouncementAvatar" class="hidden-phone">{$avatar}</div>
+	{$message}
+	{$post['attachments']}
+</div>]]></template>
+		<template name="portal_latestthreads_thread" version="1609"><![CDATA[<a href="{$mybb->settings['bburl']}/{$thread['threadlink']}">{$thread['subject']}</a><br />
+	<span class="smalltext">
+		<a href="{$thread['lastpostlink']}">{$lang->latest_threads_lastpost}</a> {$lastposterlink}, {$lastpostdate} {$lastposttime}<br />
+		Posts: {$thread['replies']}, Views {$thread['views']}
+	</span>
+</br>]]></template>
+		<template name="forumdisplay" version="1609"><![CDATA[<html>
+<head>
+	<title>{$mybb->settings['bbname']} - {$foruminfo['name']} </title>
+	{$headerinclude}
+	{$rssdiscovery}
+	<script type="text/javascript">
+	<!--
+		lang.no_new_posts = "{$lang->no_new_posts}";
+		lang.click_mark_read = "{$lang->click_mark_read}";
+	// -->
+	</script>
+	<script type="text/javascript">
+		jQuery.noConflict();
+		jQuery(document).ready(function($) {
+
+			$(".navForum").addClass("active");
+
+			$('.date').tooltip();
+
+			$('.sortFormToggle').click(function() {
+				$('.sortForm').toggle('fast', function() {});
+			});
+
+			$('.modOptionsToggle').click(function() {
+				$('.modOptions').toggle('fast', function() {});
+			});
+		});			
+	</script>
+	</head>
+	<body>
+		{$header}
+		<div class="visible-phone spacefixIndex"></div>
+		{$moderatedby}
+		{$rules}
+		{$subforums}
+		{$threadslist}
+		{$usersbrowsing}
+		{$footer}
+	</body>
+</html>]]></template>
+		<template name="header_welcomeblock_guest" version="1609"><![CDATA[<script type="text/javascript">
+<!--
+	lang.username = "{$login_username}";
+	lang.password = "{$lang->login_password}";
+	lang.login = "{$lang->login}";
+	lang.lost_password = " &mdash; <a href=\"{$mybb->settings['bburl']}/member.php?action=lostpw\">{$lang->lost_password}<\/a>";
+	lang.register_url = " &mdash; <a href=\"{$mybb->settings['bburl']}/member.php?action=register\">{$lang->welcome_register}<\/a>";
+	lang.remember_me = "{$lang->remember_me}";
+// -->
+</script>
+
+		 <a href="{$mybb->settings['bburl']}/member.php?action=register"><button type="button" class="btn btn-small btn-primary pull-right">{$lang->welcome_register}</button></a> &nbsp;
+<a href="{$mybb->settings['bburl']}/member.php?action=login" onclick="MyBB.quickLogin(); return false;"><button type="button" class="btn btn-small pull-right" style="margin-right:13px;">{$lang->welcome_login}</button></a>]]></template>
+		<template name="postbit_quickdelete" version="1609"><![CDATA[<a href="editpost.php?pid={$post['pid']}" onclick="Thread.deletePost({$post['pid']}); return false;" style="display: none;" id="quick_delete_{$post['pid']}">Delete</a>
+<script type="text/javascript">
+// <!--
+	$('quick_delete_{$post['pid']}').style.display = '';
+// -->
+</script>]]></template>
+		<template name="member_register_agreement" version="1609"><![CDATA[<html>
+	<head>
+		<title>{$mybb->settings['bbname']} - {$lang->agreement}</title>
+		{$headerinclude}
+		<script type="text/javascript">
+  			$(document).ready(function() {
+       			$('.forumbitForumDescription').tooltip();
+        		$(".navForum").addClass("active");
+    	});
+		</script>
+	</head>
+	<body>
+		{$header}
+		<div class="row-fluid">
+			<div class="span8 offset2">	
+				<ul class="registrationBreadcrumb">
+					<li><p>Step 1 <div class="smalltext">Agreement</p></div></li>
+					<li><p>Step 2<div class="smalltext">Information</p></div></li>
+					<li><p>Step 3 <div class="smalltext">Confirmation</p></div></li>
+				</ul>
+			</div>
+		</div>
+		<div class="row-fluid">
+			<div class="span8 offset2">	
+				<form action="member.php" method="post">
+					<h3>{$mybb->settings['bbname']} - {$lang->agreement}</h3>
+					{$coppa_agreement}
+					<p>{$lang->agreement_1}</p>
+					<p>{$lang->agreement_2}</p>
+					<p>{$lang->agreement_3}</p>
+					<p>{$lang->agreement_4}</p>
+					<h4>{$lang->agreement_5}</h4>
+					<div align="center">
+						<input type="hidden" name="step" value="agreement" />
+						<input type="hidden" name="action" value="register" />
+						<input type="submit" class="btn" name="agree" value="{$lang->i_agree}" />
+					</div>
+				</form>
+			</div>
+		</div>
+		{$footer}
+	</body>
+</html>]]></template>
+		<template name="newthread" version="1609"><![CDATA[<html>
+	<head>
+		<title>{$lang->newthread_in}</title>
+		{$headerinclude}
+		<script type="text/javascript" src="jscripts/post.js?ver=1400"></script>
+	</head>
+	<body>
+		{$header}
+		{$preview}
+		{$thread_errors}
+		{$attacherror}
+<div class="spacefixIndex"></div>
+		<form action="newthread.php?fid={$fid}&amp;processed=1" method="post" enctype="multipart/form-data" name="input">
+			<input type="hidden" name="my_post_key" value="{$mybb->post_code}" />
+			<h3>{$lang->post_new_thread}</h3>
+			{$prefixselect}<input type="text" class="textbox" name="subject" size="40" maxlength="85" value="{$subject}" tabindex="1" placeholder="Thread Title..." style="width: 99%;height: 30px;font-size: 14pt;" />
+			<textarea name="message" id="message" rows="20" cols="70" tabindex="2">{$message}</textarea>
+			<div style="text-align:center; margin-top:10px">
+				<input type="submit" class="btn btn-success" name="submit" value="{$lang->post_thread}" tabindex="4" accesskey="s" />  
+				<input type="submit" class="btn" name="previewpost" value="{$lang->preview_post}" tabindex="5" />
+				<input type="submit" class="btn" name="savedraft" value="Save as Draft">
+			{$modoptions}
+			</div>			
+			{$codebuttons}
+			{$multiquote_external}
+			{$lang->post_options}
+			<label><input type="checkbox" class="checkbox" name="postoptions[signature]" value="1" tabindex="7"{$postoptionschecked['signature']} /> {$lang->options_sig}</label>
+			{$disablesmilies}
+			{$subscriptionmethod}
+			{$pollbox}
+			{$captcha}
+			{$attachbox}
+			<br />
+
+			<input type="hidden" name="action" value="do_newthread" />
+			<input type="hidden" name="posthash" value="{$posthash}" />
+			<input type="hidden" name="attachmentaid" value="" />
+			<input type="hidden" name="attachmentact" value="" />
+			<input type="hidden" name="quoted_ids" value="{$quoted_ids}" />
+			<input type="hidden" name="tid" value="{$tid}" />
+			{$editdraftpid}
+		</form>
+		{$forumrules}
+		{$footer}
+	</body>
+</html>]]></template>
+		<template name="gobutton" version="1609"><![CDATA[<input type="submit" class="btn" value="{$lang->go}" />]]></template>
+		<template name="portal_welcome_guesttext" version="1609"><![CDATA[{$lang->guest_welcome_registration}
+<br>
+<form method="post" action="{$mybb->settings['bburl']}/member.php">
+	<input type="hidden" name="action" value="do_login" />
+	<input type="hidden" name="url" value="{$portal_url}" />
+	{$username}<br>
+	<input type="text" class="textbox" name="username" value="" style="width: 92%;margin-top: 12px;"/><br>
+	{$lang->password}<br>
+	<input type="password" class="textbox" name="password" value="" style="width: 92%;margin-top: 12px;"/><br>
+	<label title="{$lang->remember_me_desc}"><input type="checkbox" class="checkbox" name="remember" value="yes" /> {$lang->remember_me}</label>
+	<input type="submit" class="btn" name="loginsubmit" value="{$lang->login}" /></form>]]></template>
+		<template name="error" version="1609"><![CDATA[<html>
+<head>
+<title>{$title}</title>
+{$headerinclude}
+</head>
+<body>
+{$header}
+<h3>{$title}</strong></h3>
+{$error}
+{$footer}
+</body>
+</html>]]></template>
+		<template name="error_nopermission" version="1609"><![CDATA[<div class="row-fluid">
+
+	<div class="span4">
+	<form action="member.php" method="post" class="form-signin">
+		<input type="hidden" name="action" value="do_login" />
+		<input type="hidden" name="url" value="{$redirect_url}" />
+		<h2 class="form-signin-heading">Please sign in</h2>
+			<input type="text" class="input-block-level" name="username" placeholder="Username">
+			<input type="password" class="input-block-level" name="password" placeholder="Password">
+			<label class="checkbox"><input type="checkbox" value="remember-me"> Remember me</label>
+		<button class="btn btn-large btn-primary" type="submit">Sign in</button>
+	</form>
+	</div>
+
+	<div class="span8">
+	<h4>{$lang->error_nopermission_guest_1}</h4>
+	<ol>
+		<li>{$lang->error_nopermission_guest_2}</li>
+		<li>{$lang->error_nopermission_guest_3}</li>
+		<li>{$lang->error_nopermission_guest_4}</li>
+		<li>{$lang->error_nopermission_guest_5}</li>
+	</ol>
+	</div>
+
+</div>]]></template>
+		<template name="portal_latestthreads" version="1609"><![CDATA[<div id="portalSidebar">
+	<div class="portalSidebarHead">
+		{$lang->latest_threads}
+	</div>
+	{$threadlist}
+</div>]]></template>
+		<template name="portal_welcome" version="1609"><![CDATA[<div id="portalSidebar">
+	<div class="portalSidebarHead">
+		{$lang->welcome}
+	</div>
+	{$welcometext}
+</div>]]></template>
+		<template name="portal_pms" version="1609"><![CDATA[<div id="portalSidebar">
+	<div class="portalSidebarHead">
+		<a href="{$mybb->settings['bburl']}/private.php">{$lang->private_messages}</a>
+	</div>
+	{$lang->pms_received_new}<br>
+	{$messages['pms_unread']} {$lang->pms_unread}<br>
+	{$messages['pms_total']} {$lang->pms_total}
+</div>]]></template>
+		<template name="portal_search" version="1609"><![CDATA[<div id="portalSidebar">
+	<div class="portalSidebarHead">
+		{$lang->search_forums}
+	</div>
+	<form method="post" action="{$mybb->settings['bburl']}/search.php">
+		<input type="hidden" name="action" value="do_search" />
+		<input type="hidden" name="postthread" value="1" />
+		<input type="hidden" name="forums" value="all" />
+		<input type="hidden" name="showresults" value="threads" />
+		<input type="text" name="keywords" value="" style="width: 92%;margin-top: 12px;">
+		{$gobutton}
+	</form>
+	<a href="{$mybb->settings['bburl']}/search.php">{$lang->advanced_search}</a>
+</div>]]></template>
+		<template name="portal_stats" version="1609"><![CDATA[<div id="portalSidebar">
+	<div class="portalSidebarHead">
+		{$lang->forum_stats}
+	</div>
+	<span class="smalltext">
+		{$lang->num_members} {$stats['numusers']}<br>
+		{$lang->latest_member} {$newestmember}<br>
+		{$lang->num_threads} {$stats['numthreads']}<br >
+		{$lang->num_posts} {$stats['numposts']}<br>
+		<a href="{$mybb->settings['bburl']}/stats.php">{$lang->full_stats}</a>
+	</span>
+</div>]]></template>
+		<template name="portal_whosonline" version="1609"><![CDATA[<div id="portalSidebar">
+	<div class="portalSidebarHead">
+		{$lang->online}
+	</div>
+	<span class="smalltext">
+		{$lang->online_users}<br> {$lang->online_counts}<br> {$onlinemembers}
+	</span>
+</div>]]></template>
+		<template name="newreply_modoptions" version="1609"><![CDATA[<div class="btn-group">
+	<button class="btn dropdown-toggle" data-toggle="dropdown">{$lang->mod_options} <span class=""></span></button>
+	<ul class="dropdown-menu">
+		<li><label><input type="checkbox" class="checkbox" name="modoptions[closethread]" value="1"{$closecheck} />&nbsp;{$lang->close_thread}</label></li>
+		<li class="divider"></li>				  
+		<li><label><input type="checkbox" class="checkbox" name="modoptions[stickthread]" value="1"{$stickycheck} />&nbsp;{$lang->stick_thread}</label></li>
+	</ul>
+</div>]]></template>
+		<template name="multipage" version="1609"><![CDATA[<div class="pagination pagination-mini">
+	<ul>
+		<li>{$prevpage}</li>
+		<li>{$start}</li>
+		<li>{$mppage}</li>
+		<li>{$end}</li>
+		<li>{$nextpage}</li>
+	</ul>
+</div>]]></template>
+		<template name="multipage_start" version="1609"><![CDATA[<a href="{$page_url}" class="start">1</a> {$lang->multipage_link_start}]]></template>
+		<template name="multipage_page_current" version="1609"><![CDATA[<span>{$i}</span>]]></template>
+		<template name="multipage_end" version="1609"><![CDATA[{$lang->multipage_link_end} <a href="{$page_url}">{$pages}</a>]]></template>
+		<template name="forumdisplay_thread_multipage" version="1609"><![CDATA[<div class="multipage">{$threadpages}{$morelink}</div>]]></template>
+		<template name="usercp_options" version="1609"><![CDATA[<html>
+<head>
+<title>{$mybb->settings['bbname']} - {$lang->edit_options}</title>
+{$headerinclude}
+</head>
+<body>
+{$header}
+<form action="usercp.php" method="post">
+<input type="hidden" name="my_post_key" value="{$mybb->post_code}" />
+<table width="100%" border="0" align="center">
+<tr>
+{$usercpnav}
+<td valign="top">
+{$errors}
+<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+<tr>
+<td class="thead" colspan="2"><strong>{$lang->edit_options}</strong></td>
+</tr>
+<tr>
+<td width="50%" class="trow1" valign="top">
+<fieldset class="trow2">
+<legend><strong>{$lang->login_cookies_privacy}</strong></legend>
+<table cellspacing="0" cellpadding="2">
+<tr>
+<td valign="top" width="1"><input type="checkbox" class="checkbox" name="invisible" id="invisible" value="1" {$invisiblecheck} /></td>
+<td><span class="smalltext"><label for="invisible">{$lang->invisible_mode}</label></span></td>
+</tr>
+</table>
+</fieldset>
+<br />
+<fieldset class="trow2">
+<legend><strong>{$lang->messaging_notification}</strong></legend>
+<table cellspacing="0" cellpadding="2">
+<tr>
+<td valign="top" width="1"><input type="checkbox" class="checkbox" name="allownotices" id="allownotices" value="1" {$allownoticescheck} /></td>
+<td><span class="smalltext"><label for="allownotices">{$lang->allow_notices}</label></span></td>
+</tr>
+<tr>
+<td valign="top" width="1"><input type="checkbox" class="checkbox" name="hideemail" id="hideemail" value="1" {$hideemailcheck} /></td>
+<td><span class="smalltext"><label for="hideemail">{$lang->allow_emails}</label></span></td>
+</tr>
+<tr>
+<td valign="top" width="1"><input type="checkbox" class="checkbox" name="receivepms" id="receivepms" value="1" {$receivepmscheck} /></td>
+<td><span class="smalltext"><label for="receivepms">{$lang->receive_pms}</label></span></td>
+</tr>
+{$pms_from_buddys}
+<tr>
+<td valign="top" width="1"><input type="checkbox" class="checkbox" name="pmnotice" id="pmnotice" value="1"{$pmnoticecheck} /></td>
+<td><span class="smalltext"><label for="pmnotice">{$lang->pm_notice}</label></span></td>
+</tr>
+<tr>
+<td valign="top" width="1"><input type="checkbox" class="checkbox" name="pmnotify" id="pmnotify" value="1" {$pmnotifycheck} /></td>
+<td><span class="smalltext"><label for="pmnotify">{$lang->pm_notify}</label></span></td>
+</tr>
+<tr>
+<td colspan="2"><span class="smalltext"><label for="subscriptionmethod">{$lang->subscription_method}</label></span></td>
+</tr>
+<tr>
+<td colspan="2">
+	<select name="subscriptionmethod" id="subscriptionmethod">
+		<option value="0" {$no_subscribe_selected}>{$lang->no_auto_subscribe}</option>
+		<option value="1" {$no_email_subscribe_selected}>{$lang->no_email_subscribe}</option>
+		<option value="2" {$instant_email_subscribe_selected}>{$lang->instant_email_subscribe}</option>
+	</select>
+</td>
+</tr>
+
+</table>
+</fieldset>
+<br />
+<fieldset class="trow2">
+<legend><strong>{$lang->date_time_options}</strong></legend>
+<table cellspacing="0" cellpadding="2">
+<tr>
+<td><span class="smalltext">{$lang->date_format}</span></td>
+</tr>
+<tr>
+<td>
+<select name="dateformat">
+{$date_format_options}
+</select>
+</td>
+</tr>
+<tr>
+<td><span class="smalltext">{$lang->time_format}</span></td>
+</tr>
+<tr>
+<td>
+<select name="timeformat">
+{$time_format_options}
+</select>
+</td>
+</tr>
+<tr>
+<td><span class="smalltext">{$lang->time_offset_desc}</span></td>
+</tr>
+<tr>
+<td>{$tzselect}</td>
+</tr>
+<tr>
+<td><span class="smalltext">{$lang->dst_correction}</span></td>
+</tr>
+<tr>
+<td>
+	<select name="dstcorrection">
+		<option value="2" {$dst_auto_selected}>{$lang->dst_correction_auto}</option>
+		<option value="1" {$dst_enabled_selected}>{$lang->dst_correction_enabled}</option>
+		<option value="0" {$dst_disabled_selected}>{$lang->dst_correction_disabled}</option>
+	</select>
+</td>
+</tr>
+</table>
+</fieldset>
+</td>
+<td width="50%" class="trow1" valign="top">
+<fieldset class="trow2">
+<legend><strong>{$lang->forum_display_options}</strong></legend>
+<table cellspacing="0" cellpadding="2">
+{$tppselect}
+<tr>
+<td><span class="smalltext">{$lang->thread_view}</span></td>
+</tr>
+<tr>
+<td>
+<select name="daysprune">
+<option value="">{$lang->use_default}</option>
+<option value="1" {$daysprunesel['1']}>{$lang->thread_view_lastday}</option>
+<option value="5" {$daysprunesel['5']}>{$lang->thread_view_5days}</option>
+<option value="10" {$daysprunesel['10']}>{$lang->thread_view_10days}</option>
+<option value="20" {$daysprunesel['20']}>{$lang->thread_view_20days}</option>
+<option value="50" {$daysprunesel['50']}>{$lang->thread_view_50days}</option>
+<option value="75" {$daysprunesel['75']}>{$lang->thread_view_75days}</option>
+<option value="100" {$daysprunesel['100']}>{$lang->thread_view_100days}</option>
+<option value="365" {$daysprunesel['365']}>{$lang->thread_view_year}</option>
+<option value="9999" {$daysprunesel['9999']}>{$lang->thread_view_all}</option>
+</select>
+</td>
+</tr>
+</table>
+</fieldset>
+<br />
+<fieldset class="trow2">
+<legend><strong>{$lang->thread_view_options}</strong></legend>
+<table cellspacing="0" cellpadding="2">
+	<tr>
+	<td valign="top" width="1"><input type="checkbox" class="checkbox" name="classicpostbit" id="classicpostbit" value="1" {$classicpostbitcheck} /></td>
+	<td><span class="smalltext"><label for="classicpostbit">{$lang->show_classic_postbit}</label></span></td>
+	</tr>
+<tr>
+<td valign="top" width="1"><input type="checkbox" class="checkbox" name="showsigs" id="showsigs" value="1" {$showsigscheck} /></td>
+<td><span class="smalltext"><label for="showsigs">{$lang->show_sigs}</label></span></td>
+</tr>
+<tr>
+<td valign="top" width="1"><input type="checkbox" class="checkbox" name="showavatars" id="showavatars" value="1" {$showavatarscheck} /></td>
+<td><span class="smalltext"><label for="showavatars">{$lang->show_avatars}</label></span></td>
+</tr>
+<tr>
+<td valign="top" width="1"><input type="checkbox" class="checkbox" name="showquickreply" id="showquickreply" value="1" {$showquickreplycheck} /></td>
+<td><span class="smalltext"><label for="showquickreply">{$lang->show_quick_reply}</label></span></td>
+</tr>
+{$pppselect}
+<tr>
+<td colspan="2"><span class="smalltext">{$lang->thread_mode}</span></td>
+</tr>
+<tr>
+<td colspan="2"><select name="threadmode"><option value="">{$lang->use_default}</option><option value="linear" {$threadview['linear']}>{$lang->linear}</option><option value="threaded" {$threadview['threaded']}>{$lang->threaded}</option></select></td>
+</tr>
+</table>
+</fieldset>
+<br />
+<fieldset class="trow2">
+<legend><strong>{$lang->other_options}</strong></legend>
+<table cellspacing="0" cellpadding="2">
+<tr>
+<td valign="top" width="1"><input type="checkbox" class="checkbox" name="showredirect" id="showredirect" value="1" {$showredirectcheck} /></td>
+<td><span class="smalltext"><label for="showredirect">{$lang->show_redirect}</label></span></td>
+</tr>
+<tr>
+{showeditorplaceholder}</td>
+</tr>
+<tr>
+<td colspan="2"><span class="smalltext">{$lang->style}</span></td>
+</tr>
+<tr>
+<td colspan="2">{$stylelist}</td>
+</tr>
+<tr>
+<td colspan="2"><span class="smalltext">{$lang->board_language}</span></td>
+</tr>
+<tr>
+<td colspan="2"><select name="language"><option value="">{$lang->use_default}</option><option value="0">-----------</option>{$langoptions}</select></td>
+</tr>
+</table>
+</fieldset>
+</td>
+</tr>
+</table>
+<br />
+<div align="center">
+<input type="hidden" name="action" value="do_options" />
+<input type="submit" class="button" name="regsubmit" value="{$lang->update_options}" />
+</div>
+</td>
+</tr>
+</table>
+</form>
+{$footer}
+</body>
+</html>]]></template>
+		<template name="newreply" version="1609"><![CDATA[<html>
+	<head>
+		<title>{$lang->post_reply_to}</title>
+		{$headerinclude}
+		<script type="text/javascript" src="jscripts/post.js?ver=1400"></script>
+	</head>
+	<body>
+		{$header}
+		{$preview}
+		{$maximageserror}
+		{$attacherror}
+		{$reply_errors}
+	<form action="newreply.php?tid={$tid}&amp;processed=1" method="post" enctype="multipart/form-data" name="input">
+		<input type="hidden" name="my_post_key" value="{$mybb->post_code}" />
+		<h3>{$lang->post_new_reply}</h3>
+
+		<textarea id="message" name="message" rows="20" cols="70" tabindex="2" >{$message}</textarea>
+		{$codebuttons}
+		{$multiquote_external}
+		{$lang->post_options}
+		<label><input type="checkbox" class="checkbox" name="postoptions[signature]" value="1" tabindex="6"{$postoptionschecked['signature']} /> {$lang->options_sig}</label>
+		{$disablesmilies}
+		{$modoptions}
+		{$subscriptionmethod}
+		{$captcha}
+		{$attachbox}
+		<br />
+		<div align="center"><input type="submit" class="button" name="submit" value="{$lang->post_reply}" tabindex="3" accesskey="s" />  <input type="submit" class="button" name="previewpost" value="{$lang->preview_post}" tabindex="4" />{$savedraftbutton}</div>
+		<input type="hidden" name="action" value="do_newreply" />
+		<input type="hidden" name="replyto" value="{$replyto}" />
+		<input type="hidden" name="posthash" value="{$posthash}" />
+		<input type="hidden" name="attachmentaid" value="" />
+		<input type="hidden" name="attachmentact" value="" />
+		<input type="hidden" name="quoted_ids" value="{$quoted_ids}" />
+		<input type="hidden" name="tid" value="{$tid}" />
+		{$editdraftpid}
+	</form>
+	{$forumrules}
+	{$threadreview}
+	{$footer}
+	</body>
+</html>]]></template>
+		<template name="showthread_quickreply" version="1609"><![CDATA[<br />
+<form method="post" action="newreply.php?tid={$tid}&amp;processed=1" name="quick_reply_form" id="quick_reply_form">
+	<input type="hidden" name="my_post_key" value="{$mybb->post_code}" />
+	<input type="hidden" name="subject" value="RE: {$thread['subject']}" />
+	<input type="hidden" name="action" value="do_newreply" />
+	<input type="hidden" name="posthash" value="{$posthash}" id="posthash" />
+	<input type="hidden" name="quoted_ids" value="" id="quoted_ids" />
+	<input type="hidden" name="lastpid" id="lastpid" value="{$last_pid}" />
+	<input type="hidden" name="from_page" value="{$page}" />
+	<input type="hidden" name="tid" value="{$tid}" />
+	<input type="hidden" name="method" value="quickreply" />
+
+	<textarea style="width: 100%; padding: 4px; margin: 0;" rows="8" cols="80" name="message" id="message" tabindex="1"></textarea>
+	<div style="margin-top: 10px;text-align: center;">
+		<input type="submit" class="btn btn-small btn-success" value="{$lang->post_reply}" tabindex="2" accesskey="s" id="quick_reply_submit" /> 
+		<input type="submit" class="btn btn-small" name="previewpost" value="{$lang->preview_post}" tabindex="3" />
+	</div>
+	
+	<label><input type="checkbox" class="checkbox" name="postoptions[signature]" value="1" {$postoptionschecked['signature']} /> {$lang->signature} </label>
+	<label><input type="checkbox" class="checkbox" name="postoptions[disablesmilies]" value="1" /> {$lang->disable_smilies} </label>{$closeoption}	
+	
+	<div class="editor_control_bar" style="width: 95%; padding: 4px; margin-top: 3px; display: none;" id="quickreply_multiquote">
+		<span class="smalltext">
+			{$lang->quickreply_multiquote_selected} <a href="./newreply.php?tid={$tid}&amp;load_all_quotes=1" onclick="return Thread.loadMultiQuoted();">{$lang->quickreply_multiquote_now}</a> {$lang->or} <a href="javascript:Thread.clearMultiQuoted();">{$lang->quickreply_multiquote_deselect}</a>.
+		</span>
+	</div>
+	{$captcha}
+</form>]]></template>
+		<template name="postbit_email" version="1609"><![CDATA[<a href="member.php?action=emailuser&amp;uid={$post['uid']}">{$lang->postbit_email}</a>]]></template>
+		<template name="postbit_find" version="1609"><![CDATA[<a href="search.php?action=finduser&amp;uid={$post['uid']}">{$lang->postbit_find}</a>]]></template>
+		<template name="postbit_delete_pm" version="1609"><![CDATA[<a href="private.php?action=delete&amp;pmid={$id}&amp;my_post_key={$mybb->post_code}">{$lang->delete_title}</a>]]></template>
+		<template name="postbit_reply_pm" version="1609"><![CDATA[<a href="private.php?action=send&amp;pmid={$id}&amp;do=reply">{$lang->reply_title}</a>]]></template>
+		<template name="postbit_pm" version="1609"><![CDATA[<a href="private.php?action=send&amp;uid={$post['uid']}">{$lang->postbit_pm}</a>]]></template>
+		<template name="postbit_rep_button" version="1609"><![CDATA[<a href="javascript:MyBB.reputation({$post['uid']},{$post['pid']});">{$lang->postbit_reputation_add}</a>]]></template>
+		<template name="calendar_addevent" version="1609"><![CDATA[<html>
+<head>
+<title>{$mybb->settings['bbname']} - {$lang->calendar} - {$lang->add_event}</title>
+{$headerinclude}
+</head>
+<body>
+{$header}
+{$event_errors}
+<form action="calendar.php" method="post" name="input">
+	<input type="hidden" name="my_post_key" value="{$mybb->post_code}" />
+	<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder" style="clear: both;">
+		<tr>
+			<td colspan="2" width="100%" class="thead"><strong>{$lang->add_event}</strong></td>
+		</tr>
+		<tr>
+			<td width="20%" class="trow1"><strong>{$lang->event_name}</strong></td>
+			<td class="trow1"><input type="text" class="textbox" size="50" name="name" maxlength="120" value="{$name}"/></td>
+		</tr>
+		<tr>
+			<td width="20%" class="trow1"><strong>{$lang->select_calendar}</strong></td>
+			<td class="trow1">
+				<select name="calendar">
+					{$calendar_select}
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td class="trow2" style="vertical-align: top;"><strong>{$lang->event_date}</strong></td>
+			<td class="trow1">
+				<script type="text/javascript">
+				<!--
+					function toggleType()
+					{
+						if($('type_single').checked == true)
+						{
+							Element.hide('ranged_selects');
+							Element.show('single_selects');
+						}
+						else
+						{
+							Element.hide('single_selects');
+							Element.show('ranged_selects');
+							toggleRepeats();
+						}
+					}
+
+					function toggleRepeats()
+					{
+						var repeats = $('repeats').options[$('repeats').selectedIndex].value;
+						$$('.repeats_type').each(function(e)
+						{
+							Element.hide(e);
+						});
+						if($('repeats_type_'+repeats))
+						{
+							Element.show('repeats_type_'+repeats);
+						}
+					}
+				// -->
+				</script>
+				<dl style="margin-top: 0; margin-bottom: 0; width: 100%;">
+					<dt><input type="radio" name="type" value="single" {$type_single} id="type_single" onclick="toggleType();" /> <label for="type_single"><strong>{$lang->type_single}</strong></label></dt>
+					<dd style="margin-top: 4px;" id="single_selects">
+						<select name="single_day">
+							{$single_days}
+						</select>
+						&nbsp;
+						<select name="single_month">
+							<option value="1"{$single_month['1']}>{$lang->month_1}</option>
+							<option value="2"{$single_month['2']}>{$lang->month_2}</option>
+							<option value="3"{$single_month['3']}>{$lang->month_3}</option>
+							<option value="4"{$single_month['4']}>{$lang->month_4}</option>
+							<option value="5"{$single_month['5']}>{$lang->month_5}</option>
+							<option value="6"{$single_month['6']}>{$lang->month_6}</option>
+							<option value="7"{$single_month['7']}>{$lang->month_7}</option>
+							<option value="8"{$single_month['8']}>{$lang->month_8}</option>
+							<option value="9"{$single_month['9']}>{$lang->month_9}</option>
+							<option value="10"{$single_month['10']}>{$lang->month_10}</option>
+							<option value="11"{$single_month['11']}>{$lang->month_11}</option>
+							<option value="12"{$single_month['12']}>{$lang->month_12}</option>
+						</select>
+						&nbsp;
+						<select name="single_year">
+							{$single_years}
+						</select>
+					</dd>
+					<dt><input type="radio" name="type" value="ranged" {$type_ranged} id="type_ranged" onclick="toggleType();" /> <label for="type_ranged"><strong>{$lang->type_ranged}</strong></label></dt>
+					<dd style="margin-top: 4px; width: 100%;" id="ranged_selects">
+						<table width="100%">
+							<tr>
+								<td class="smalltext" style="padding: 4px; text-align: right;">{$lang->start_time}</td>
+								<td style="padding: 4px;">
+									<select name="start_day">
+										{$start_days}
+									</select>
+									<select name="start_month">
+										<option value="1"{$start_month['1']}>{$lang->month_1}</option>
+										<option value="2"{$start_month['2']}>{$lang->month_2}</option>
+										<option value="3"{$start_month['3']}>{$lang->month_3}</option>
+										<option value="4"{$start_month['4']}>{$lang->month_4}</option>
+										<option value="5"{$start_month['5']}>{$lang->month_5}</option>
+										<option value="6"{$start_month['6']}>{$lang->month_6}</option>
+										<option value="7"{$start_month['7']}>{$lang->month_7}</option>
+										<option value="8"{$start_month['8']}>{$lang->month_8}</option>
+										<option value="9"{$start_month['9']}>{$lang->month_9}</option>
+										<option value="10"{$start_month['10']}>{$lang->month_10}</option>
+										<option value="11"{$start_month['11']}>{$lang->month_11}</option>
+										<option value="12"{$start_month['12']}>{$lang->month_12}</option>
+									</select>
+									<select name="start_year">
+										{$start_years}
+									</select>
+									<span class="smalltext">&nbsp;&nbsp;&nbsp;{$lang->enter_time}</span>
+									<input type="text" class="textbox" name="start_time" value="{$start_time}" size="7" />
+								</td>
+							</tr>
+							<tr>
+								<td class="smalltext" style="padding: 4px; text-align: right;">{$lang->end_time}</td>
+								<td style="padding: 4px;">
+									<select name="end_day">
+										{$end_days}
+									</select>
+									<select name="end_month">
+										<option value="1"{$end_month['1']}>{$lang->month_1}</option>
+										<option value="2"{$end_month['2']}>{$lang->month_2}</option>
+										<option value="3"{$end_month['3']}>{$lang->month_3}</option>
+										<option value="4"{$end_month['4']}>{$lang->month_4}</option>
+										<option value="5"{$end_month['5']}>{$lang->month_5}</option>
+										<option value="6"{$end_month['6']}>{$lang->month_6}</option>
+										<option value="7"{$end_month['7']}>{$lang->month_7}</option>
+										<option value="8"{$end_month['8']}>{$lang->month_8}</option>
+										<option value="9"{$end_month['9']}>{$lang->month_9}</option>
+										<option value="10"{$end_month['10']}>{$lang->month_10}</option>
+										<option value="11"{$end_month['11']}>{$lang->month_11}</option>
+										<option value="12"{$end_month['12']}>{$lang->month_12}</option>
+									</select>
+									<select name="end_year">
+										{$end_years}
+									</select>
+									<span class="smalltext">&nbsp;&nbsp;&nbsp;{$lang->enter_time}</span>
+									<input type="text" class="textbox" name="end_time" value="{$end_time}" size="7" />
+								</td>
+							</tr>
+							<tr>
+								<td class="smalltext" style="padding: 4px; text-align: right; vertical-align: top;">{$lang->time_zone}</td>
+								<td style="padding: 4px;">
+									{$timezones}<br />
+									<label class="smalltext" style="display: block; padding-top: 4px;"><input type="checkbox" name="ignoretimezone" value="1" {$ignore_timezone} style="vertical-align: middle;" /> {$lang->ignore_timezone} </label>
+								</td>
+							</tr>
+							<tr>
+								<td class="smalltext" style="padding: 4px; text-align: right; vertical-align:top;">{$lang->repeats}</td>
+								<td class="smalltext" style="padding: 4px;">
+									<select name="repeats" id="repeats" onchange="toggleRepeats();">
+										<option value="0">{$lang->does_not_repeat}</option>
+										<option value="1"{$repeats_sel[1]}>{$lang->repeats_daily}</option>
+										<option value="2"{$repeats_sel[2]}>{$lang->repeats_weekdays}</option>
+										<option value="3"{$repeats_sel[3]}>{$lang->repeats_weekly}</option>
+										<option value="4"{$repeats_sel[4]}>{$lang->repeats_monthly}</option>
+										<option value="5"{$repeats_sel[5]}>{$lang->repeats_yearly}</option>
+									</select>
+									<div class="repeats_type" id="repeats_type_1" style="padding: 4px;">
+										{$lang->repeats_every}
+										<input type="text" class="textbox" name="repeats_1_days" value="{$repeats_1_days}" size="2" /> {$lang->day_or_days}
+									</div>
+									<div class="repeats_type" id="repeats_type_3" style="padding: 4px;">
+										{$lang->repeats_every}
+										<input type="text" class="textbox" name="repeats_3_weeks" value="{$repeats_3_weeks}" size="2" /> {$lang->week_or_weeks_on}
+										<br />
+										<table style="padding: 4px;">
+											<tr>
+												<td style="padding: 2px;" class="smalltext"><label><input type="checkbox" name="repeats_3_days[0]" value="1" {$repeats_3_days[0]} style="vertical-align: middle;" /> {$lang->sunday}</label></td>
+												<td style="padding: 2px;" class="smalltext"><label><input type="checkbox" name="repeats_3_days[1]" value="1" {$repeats_3_days[1]} style="vertical-align: middle;" /> {$lang->monday}</label></td>
+												<td style="padding: 2px;" class="smalltext"><label><input type="checkbox" name="repeats_3_days[2]" value="1" {$repeats_3_days[2]} style="vertical-align: middle;" /> {$lang->tuesday}</label></td>
+												<td style="padding: 2px;" class="smalltext"><label><input type="checkbox" name="repeats_3_days[3]" value="1" {$repeats_3_days[3]} style="vertical-align: middle;" /> {$lang->wednesday}</label></td>
+											</tr>
+											<tr>
+												<td style="padding: 2px;" class="smalltext"><label><input type="checkbox" name="repeats_3_days[4]" value="1" {$repeats_3_days[4]} style="vertical-align: middle;" /> {$lang->thursday}</label></td>
+												<td style="padding: 2px;" class="smalltext"><label><input type="checkbox" name="repeats_3_days[5]" value="1" {$repeats_3_days[5]} style="vertical-align: middle;" /> {$lang->friday}</label></td>
+												<td style="padding: 2px;" class="smalltext" colspan="2"><label><input type="checkbox" name="repeats_3_days[6]" value="1" {$repeats_3_days[6]} style="vertical-align: middle;" /> {$lang->saturday}</label></td>
+											</tr>
+										</table>
+									</div>
+									<div class="repeats_type" id="repeats_type_4" style="padding: 4px;">
+										<div class="smalltext"><label>
+											<input type="radio" name="repeats_4_type" id="repeats_4_type_1" value="1" style="vertical-align: middle;" {$repeats_4_type[1]} />
+											{$lang->repeats_on_day}</label>
+											<input type="text" class="textbox" name="repeats_4_day" value="{$repeats_4_day}" onfocus="$('repeats_4_type_1').checked=true;" size="2" /> {$lang->of_every} <input type="text" class="textbox" name="repeats_4_months" value="{$repeats_4_months}" size="2" onfocus="$('repeats_4_type_1').checked=true;" /> {$lang->month_or_months}
+										</div>
+										<div class="smalltext" style="margin-top: 5px;"><label>
+											<input type="radio" name="repeats_4_type" id="repeats_4_type_2" value="2" style="vertical-align: middle;" {$repeats_4_type[2]} />
+											{$lang->repeats_on_the}</label>
+											<select name="repeats_4_occurance" onfocus="$('repeats_4_type_2').checked=true;">
+												<option value="1"{$repeats_4_occurance[1]}>{$lang->first}</option>
+												<option value="2"{$repeats_4_occurance[2]}>{$lang->second}</option>
+												<option value="3"{$repeats_4_occurance[3]}>{$lang->third}</option>
+												<option value="4"{$repeats_4_occurance[4]}>{$lang->fourth}</option>
+												<option value="last"{$repeats_4_occurance['last']}>{$lang->last}</option>
+											</select>
+											<select name="repeats_4_weekday" onfocus="$('repeats_4_type_2').checked=true;">
+												<option value="0"{$repeats_4_weekday[0]}>{$lang->sunday}</option>
+												<option value="1"{$repeats_4_weekday[1]}>{$lang->monday}</option>
+												<option value="2"{$repeats_4_weekday[2]}>{$lang->tuesday}</option>
+												<option value="3"{$repeats_4_weekday[3]}>{$lang->wednesday}</option>
+												<option value="4"{$repeats_4_weekday[4]}>{$lang->thursday}</option>
+												<option value="5"{$repeats_4_weekday[5]}>{$lang->friday}</option>
+												<option value="6"{$repeats_4_weekday[6]}>{$lang->saturday}</option>
+											</select>
+											{$lang->of_every}
+											<input type="text" class="textbox" name="repeats_4_months2" value="{$repeats_4_months2}" size="2" onfocus="$('repeats_4_type_2').checked=true;" /> {$lang->month_or_months}
+										</div>
+									</div>
+									<div class="repeats_type" id="repeats_type_5" style="padding: 4px;">
+										<div class="smalltext"><label>
+											<input type="radio" name="repeats_5_type" value="1" id="repeats_5_type_1" style="vertical-align: middle;" {$repeats_5_type[1]} />
+											{$lang->repeats_on}</label>
+											<input type="text" class="textbox" name="repeats_5_day" onfocus="$('repeats_5_type_1').checked=true;" value="{$repeats_5_day}" size="2" />
+											<select name="repeats_5_month" onfocus="$('repeats_5_type_1').checked=true;" >
+												<option value="1"{$repeats_5_month['1']}>{$lang->month_1}</option>
+												<option value="2"{$repeats_5_month['2']}>{$lang->month_2}</option>
+												<option value="3"{$repeats_5_month['3']}>{$lang->month_3}</option>
+												<option value="4"{$repeats_5_month['4']}>{$lang->month_4}</option>
+												<option value="5"{$repeats_5_month['5']}>{$lang->month_5}</option>
+												<option value="6"{$repeats_5_month['6']}>{$lang->month_6}</option>
+												<option value="7"{$repeats_5_month['7']}>{$lang->month_7}</option>
+												<option value="8"{$repeats_5_month['8']}>{$lang->month_8}</option>
+												<option value="9"{$repeats_5_month['9']}>{$lang->month_9}</option>
+												<option value="10"{$repeats_5_month['10']}>{$lang->month_10}</option>
+												<option value="11"{$repeats_5_month['11']}>{$lang->month_11}</option>
+												<option value="12"{$repeats_5_month['12']}>{$lang->month_12}</option>
+											</select>
+											{$lang->every}
+											<input type="text" class="textbox" name="repeats_5_years" value="{$repeats_5_years}" onfocus="$('repeats_5_type_1').checked=true;" size="2" /> {$lang->year_or_years}
+										</div>
+										<div class="smalltext" style="margin-top: 5px;"><label>
+											<input type="radio" name="repeats_5_type" value="2" id="repeats_5_type_2" style="vertical-align: middle;" {$repeats_5_type[2]} />
+											{$lang->repeats_on_the}</label>
+											<select name="repeats_5_occurance" onfocus="$('repeats_5_type_2').checked=true;" >
+												<option value="1"{$repeats_5_occurance[1]}>{$lang->first}</option>
+												<option value="2"{$repeats_5_occurance[2]}>{$lang->second}</option>
+												<option value="3"{$repeats_5_occurance[3]}>{$lang->third}</option>
+												<option value="4"{$repeats_5_occurance[4]}>{$lang->fourth}</option>
+												<option value="last"{$repeats_4_occurance['last']}>{$lang->last}</option>
+											</select>
+											<select name="repeats_5_weekday" onfocus="$('repeats_5_type_2').checked=true;" >
+												<option value="0"{$repeats_5_weekday[0]}>{$lang->sunday}</option>
+												<option value="1"{$repeats_5_weekday[1]}>{$lang->monday}</option>
+												<option value="2"{$repeats_5_weekday[2]}>{$lang->tuesday}</option>
+												<option value="3"{$repeats_5_weekday[3]}>{$lang->wednesday}</option>
+												<option value="4"{$repeats_5_weekday[4]}>{$lang->thursday}</option>
+												<option value="5"{$repeats_5_weekday[5]}>{$lang->friday}</option>
+												<option value="6"{$repeats_5_weekday[6]}>{$lang->saturday}</option>
+											</select>
+											{$lang->of}
+											<select name="repeats_5_month2" onfocus="$('repeats_5_type_2').checked=true;" >
+												<option value="1"{$repeats_5_month2['1']}>{$lang->month_1}</option>
+												<option value="2"{$repeats_5_month2['2']}>{$lang->month_2}</option>
+												<option value="3"{$repeats_5_month2['3']}>{$lang->month_3}</option>
+												<option value="4"{$repeats_5_month2['4']}>{$lang->month_4}</option>
+												<option value="5"{$repeats_5_month2['5']}>{$lang->month_5}</option>
+												<option value="6"{$repeats_5_month2['6']}>{$lang->month_6}</option>
+												<option value="7"{$repeats_5_month2['7']}>{$lang->month_7}</option>
+												<option value="8"{$repeats_5_month2['8']}>{$lang->month_8}</option>
+												<option value="9"{$repeats_5_month2['9']}>{$lang->month_9}</option>
+												<option value="10"{$repeats_5_month2['10']}>{$lang->month_10}</option>
+												<option value="11"{$repeats_5_month2['11']}>{$lang->month_11}</option>
+												<option value="12"{$repeats_5_month2['12']}>{$lang->month_12}</option>
+											</select>
+											{$lang->every}
+											<input type="text" class="textbox" name="repeats_5_years2" value="{$repeats_5_years}" size="2" onfocus="$('repeats_5_type_2').checked=true;" /> {$lang->year_or_years}
+										</div>
+									</div>
+								</td>
+							</tr>
+						</table>
+					</dd>
+				</dl>
+				<script type="text/javascript">
+				<!--
+					toggleType();
+					toggleRepeats();
+				// -->
+				</script>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top" width="20%" class="trow1"><strong>{$lang->event_details}</strong>{$smilieinserter}</td>
+			<td class="trow1"><textarea name="description" id="message" rows="20" cols="70">{$description}</textarea>
+			{$codebuttons}</td>
+		</tr>
+		<tr>
+			<td width="20%" class="trow2"><strong>{$lang->event_options}</strong></td>
+			<td class="trow2">
+				<input type="checkbox" class="checkbox" name="private" value="1"{$privatecheck} /><span class="smalltext">{$lang->private_option}</span><br />
+			</td>
+		</tr>
+	</table>
+	<br />
+	<input type="hidden" name="action" value="do_addevent" />
+	<div align="center"><input type="submit" class="button" value="{$lang->post_event}" /></div>
+</form>
+{$footer}
+</body>
+</html>]]></template>
+		<template name="calendar_addeventlink" version="1609"><![CDATA[<a href="calendar.php?action=addevent&amp;calendar={$calendar['cid']}">{$lang->add_public_event}</a> | <a href="calendar.php?action=addevent&amp;calendar={$calendar['cid']}&amp;private=1">{$lang->add_private_event}</a>]]></template>
+		<template name="calendar_addprivateevent" version="1609"><![CDATA[<a href="calendar.php?action=addevent&amp;calendar={$calendar['cid']}&amp;private=1">{$lang->add_private_event}</a>]]></template>
+		<template name="calendar_addpublicevent" version="1609"><![CDATA[<a href="calendar.php?action=addevent&amp;calendar={$calendar['cid']}">{$lang->add_public_event}</a>]]></template>
+		<template name="calendar_dayview" version="1609"><![CDATA[<html>
+<head>
+<title>{$mybb->settings['bbname']} - {$lang->calendar}</title>
+{$headerinclude}
+</head>
+<body>
+{$header}
+{$birthdays}
+{$events}
+<br />
+<form action="calendar.php" method="post">
+	<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+		<tr>
+			<td class="trow1">
+				<table width="100%" cellspacing="0" cellpadding="0" border="0">
+					<tr>
+					<td class="trow1" valign="top">{$addevent}</td>
+						<td class="trow1" align="right">
+						<span class="smalltext"><strong>{$lang->jump_month}</strong></span>
+						<select name="month">
+							<option value="{$month}">{$monthnames[$month]}</option>
+							<option value="{$month}">----------</option>
+							<option value="1">{$lang->alt_month_1}</option>
+							<option value="2">{$lang->alt_month_2}</option>
+							<option value="3">{$lang->alt_month_3}</option>
+							<option value="4">{$lang->alt_month_4}</option>
+							<option value="5">{$lang->alt_month_5}</option>
+							<option value="6">{$lang->alt_month_6}</option>
+							<option value="7">{$lang->alt_month_7}</option>
+							<option value="8">{$lang->alt_month_8}</option>
+							<option value="9">{$lang->alt_month_9}</option>
+							<option value="10">{$lang->alt_month_10}</option>
+							<option value="11">{$lang->alt_month_11}</option>
+							<option value="12">{$lang->alt_month_12}</option>
+						</select>
+						<select name="year">
+							<option value="{$year}">{$year}</option>
+							<option value="{$year}">----------</option>
+							{$yearsel}
+						</select>
+						{$gobutton}
+						<br /><br />
+						<span class="smalltext"><strong>{$lang->jump_to_calendar}</strong></span>
+						{$calendar_jump}
+						{$gobutton}
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</form>
+{$footer}
+</body>
+</html>]]></template>
+		<template name="calendar_dayview_birthdays" version="1609"><![CDATA[<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+<tr>
+<td class="thead"><strong>{$lang->birthdays_on_day}</strong></td>
+</tr>
+<tr>
+<td class="trow1"><span class="smalltext">{$birthday_list}</span></td>
+</tr>
+</table>
+<br />]]></template>
+		<template name="calendar_dayview_birthdays_bday" version="1609"><![CDATA[{$comma}{$birthday['profilelink']}{$age}]]></template>
+		<template name="forumdisplay_thread_modbit" version="1609"><![CDATA[<input type="checkbox" class="checkbox" name="inlinemod_{$multitid}" id="inlinemod_{$multitid}" value="1" {$inlinecheck}  />]]></template>
+		<template name="modcp_editprofile" version="1609"><![CDATA[<html>
+<head>
+<title>{$mybb->settings['bbname']} - {$lang->edit_profile}</title>
+{$headerinclude}
+<script type="text/javascript">
+<!--
+	var mod_posts = '{$modpost_check}';
+	var susp_posts = '{$suspost_check}';
+// -->
+</script>
+</head>
+<body>
+	{$header}
+	<form action="modcp.php" method="post">
+		<input type="hidden" name="my_post_key" value="{$mybb->post_code}" />
+		<table width="100%" border="0" align="center">
+			<tr>
+				{$modcp_nav}
+				<td valign="top">
+					{$errors}
+					<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+						<tr>
+							<td class="thead" colspan="2"><strong>{$lang->edit_profile}</strong></td>
+						</tr>
+						<tr>
+							<td width="50%" class="trow1" valign="top">
+								<fieldset class="trow2">
+									<legend><strong>{$lang->profile_required}</strong></legend>
+									<table cellspacing="0" cellpadding="{$theme['tablespace']}">
+										<tr>
+											<td><span class="smalltext">{$lang->current_username}</span></td>
+										</tr>
+										<tr>
+											<td><strong>{$profile_link}</strong></td>
+										</tr>
+										{$requiredfields}
+									</table>
+								</fieldset>
+								<br />
+								<fieldset class="trow2">
+									<legend><strong>{$lang->profile_optional}</strong></legend>
+									<table cellspacing="0" cellpadding="{$theme['tablespace']}">
+										<tr>
+											<td colspan="3"><span class="smalltext"><label><input type="checkbox" class="checkbox" name="remove_avatar" value="1" /> {$lang->remove_avatar}</label></span></td>
+										</tr><tr><td colspan="3"><span class="smalltext"><label><input type="checkbox" class="checkbox" name="remove_profilepic" value="1" /> {$lang->remove_profile_picture}</label></span></td></tr>
+
+										<tr>
+											<td colspan="3"><span class="smalltext">{$lang->birthday}</span></td>
+										</tr>
+										<tr>
+											<td>
+												<select name="birthday_day">
+													<option value="">&nbsp;</option>
+													{$bdaydaysel}
+												</select>
+											</td>
+											<td>
+												<select name="birthday_month">
+													<option value="">&nbsp;</option>
+													<option value="1" {$bdaymonthsel['1']}>{$lang->month_1}</option>
+													<option value="2" {$bdaymonthsel['2']}>{$lang->month_2}</option>
+													<option value="3" {$bdaymonthsel['3']}>{$lang->month_3}</option>
+													<option value="4" {$bdaymonthsel['4']}>{$lang->month_4}</option>
+													<option value="5" {$bdaymonthsel['5']}>{$lang->month_5}</option>
+													<option value="6" {$bdaymonthsel['6']}>{$lang->month_6}</option>
+													<option value="7" {$bdaymonthsel['7']}>{$lang->month_7}</option>
+													<option value="8" {$bdaymonthsel['8']}>{$lang->month_8}</option>
+													<option value="9" {$bdaymonthsel['9']}>{$lang->month_9}</option>
+													<option value="10" {$bdaymonthsel['10']}>{$lang->month_10}</option>
+													<option value="11" {$bdaymonthsel['11']}>{$lang->month_11}</option>
+													<option value="12" {$bdaymonthsel['12']}>{$lang->month_12}</option>
+												</select>
+											</td>
+											<td>
+												<input type="text" class="textbox" size="4" maxlength="4" name="birthday_year" value="{$mybb->input['birthday_year']}" />
+											</td>
+										</tr>
+										<tr>
+											<td colspan="3"><span class="smalltext">{$lang->website_url}</span></td>
+										</tr>
+										<tr>
+											<td colspan="3"><input type="text" class="textbox" name="website" size="25" maxlength="75" value="{$mybb->input['website']}" /></td>
+										</tr>
+									</table>
+								</fieldset>
+								{$customfields}
+							</td>
+							<td width="50%" class="trow1" valign="top">
+								<fieldset class="trow2">
+									<legend><strong>{$lang->custom_usertitle}</strong></legend>
+									<table cellspacing="0" cellpadding="{$theme['tablespace']}">
+										<tr>
+											<td><span class="smalltext">{$lang->custom_usertitle_note}</span></td>
+										</tr>
+										<tr>
+											<td><span class="smalltext">{$lang->default_usertitle}</span></td>
+										</tr>
+										<tr>
+											<td><span class="smalltext"><strong>{$defaulttitle}</strong></span></td>
+										</tr>
+										<tr>
+											<td><span class="smalltext">{$lang->current_custom_usertitle}</span></td>
+										</tr>
+										<tr>
+											<td><span class="smalltext"><strong>{$user['usertitle']}</strong></span></td>
+										</tr>
+										<tr>
+											<td><span class="smalltext">{$lang->new_custom_usertitle}</span></td>
+										</tr>
+										<tr>
+											<td><input type="text" class="textbox" name="usertitle" size="25" maxlength="{$mybb->settings['customtitlemaxlength']}" value="{$newtitle}" /></td>
+										</tr>
+										<tr>
+											<td><span class="smalltext"><input type="checkbox" name="reverttitle" id="reverttitle" class="checkbox" /> {$lang->revert_usertitle}</span></td>
+										</tr>
+									</table>
+								</fieldset>
+								<br />
+								<fieldset class="trow2">
+									<legend><strong>{$lang->additional_contact_details}</strong></legend>
+									<table cellspacing="0" cellpadding="{$theme['tablespace']}">
+										<tr>
+											<td><span class="smalltext">{$lang->icq_number}</span></td>
+										</tr>
+										<tr>
+											<td><input type="text" class="textbox" name="icq" size="25" value="{$mybb->input['icq']}" /></td>
+										</tr>
+										<tr>
+											<td><span class="smalltext">{$lang->aim_screenname}</span></td>
+										</tr>
+										<tr>
+											<td><input type="text" class="textbox" name="aim" size="25" value="{$mybb->input['aim']}" /></td>
+										</tr>
+										<tr>
+											<td><span class="smalltext">{$lang->msn}</span></td>
+										</tr>
+										<tr>
+											<td><input type="text" class="textbox" name="msn" size="25" value="{$mybb->input['msn']}" /></td>
+										</tr>
+										<tr>
+											<td><span class="smalltext">{$lang->yahoo_id}</span></td>
+										</tr>
+										<tr>
+											<td><input type="text" class="textbox" name="yahoo" size="25" value="{$mybb->input['yahoo']}" /></td>
+										</tr>
+									</table>
+								</fieldset>
+								<br />
+								<fieldset class="trow2">
+									<legend><strong>{$lang->moderation}</strong></legend>
+									<table cellspacing="0" cellpadding="{$theme['tablespace']}" width="100%">
+										<tr>
+											<td>
+<dl style="margin-top: 0; margin-bottom: 0;">
+<dt><label><input type="checkbox" name="moderateposting" value="1" {$modpost_checked} class="checkbox" onclick="toggleSuspend('modposts');" id="modpost" /> {$lang->moderate_posts}</label></dt>
+<dd style="margin-top: 4px;" id="modposts_action">
+<table cellpadding="4">
+{$moderateposts_info}
+	<tr>
+		<td width="35%">{$lang->modpost_length}</td>
+		<td><input type="text" name="modpost_time" value="{$mybb->input['modpost_time']}" class="textbox" style="width: 2em;" /> {$modpost_options}</td>
+	</tr>
+</table>
+</dd>
+</dl>
+											</td>
+										</tr>
+										<tr>
+											<td>
+<dl style="margin-top: 0; margin-bottom: 0;">
+<dt><label><input type="checkbox" name="suspendposting" value="1" {$suspost_checked} class="checkbox" onclick="toggleSuspend('susposts');" id="suspost" /> {$lang->suspend_posts}</label></dt>
+<dd style="margin-top: 4px;" id="susposts_action">
+<table cellpadding="4">
+{$suspendposting_info}
+	<tr>
+		<td width="35%">{$lang->suspost_length}</td>
+		<td><input type="text" name="suspost_time" value="{$mybb->input['suspost_time']}" class="textbox" style="width: 2em;" /> {$suspost_options}</td>
+	</tr>
+</table>
+</dd>
+</dl></td>
+										</tr>
+									</table>
+								</fieldset>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="trow1" valign="top">
+								<fieldset class="trow1">
+									<legend><strong>{$lang->signature}</strong></legend>
+									<table cellspacing="0" cellpadding="{$theme['tablespace']}">
+<tr>
+<td class="trow1" width="80%">
+<textarea rows="15" cols="70" id="signature" name="signature">{$user['signature']}</textarea>
+{$codebuttons}
+</td>
+</tr>
+{$suspend_signature}
+									</table>
+								</fieldset>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="trow1" valign="top">
+								<fieldset class="trow2">
+									<legend><strong>{$lang->mod_notes}</strong></legend>
+									<textarea name="usernotes" id="usernotes" rows="10" cols="70">{$user['usernotes']}</textarea>
+								</fieldset>
+							</td>
+						</tr>
+					</table>
+					<br />
+					<div align="center">
+						<input type="hidden" name="action" value="do_editprofile" />
+						<input type="hidden" name="uid" value="{$user['uid']}" />
+						<input type="submit" class="button" value="{$lang->update_profile}" />
+					</div>
+				</td>
+			</tr>
+		</table>
+	</form>
+	{$footer}
+<script type="text/javascript">
+<!--
+	if(mod_posts == 0)
+	{
+		$('modposts_action').hide();
+	}
+
+	if(susp_posts == 0)
+	{
+		$('susposts_action').hide();
+	}
+
+	function toggleSuspend(action)
+	{
+		var item = action + "_action";
+
+		if(action == "modposts")
+		{
+			$('susposts_action').hide();
+			$('suspost').checked = false;
+
+			if($("modpost").checked == false)
+			{
+				$("modpost").checked = false;
+				$("modposts_action").hide();
+			}
+			else
+			{
+				$("modpost").checked = true;
+				$("modposts_action").show();
+			}
+		}
+
+		if(action == "susposts")
+		{
+			$('modposts_action').hide();
+			$('modpost').checked = false;
+
+			if($("suspost").checked == false)
+			{
+				$("suspost").checked = false;
+				$("susposts_action").hide();
+			}
+			else
+			{
+				$("suspost").checked = true;
+				$("susposts_action").show();
+			}
+		}
+	}
+// -->
+</script>
+</body>
+</html>]]></template>
+		<template name="forumdisplay_thread_multipage_page" version="1609"><![CDATA[<a href="{$page_link}" class="page">{$i}</a>]]></template>
+		<template name="forumdisplay_thread_multipage_more" version="1609"><![CDATA[<span style="color: #D6D6D6; font-size: 8pt;">...</span> <a href="{$page_link}" class="page">{$thread['pages']}</a>]]></template>
+		<template name="forumdisplay_inlinemoderation_selectall" version="1609"><![CDATA[<div id="alert selectAllrow" class="hiddenrow">
+	<div colspan="8" class="selectall">{$lang->page_selected} <a href="#" onclick='inlineModeration.selectAll();'>{$lang->select_all}</a></div>
+</div>
+<div id="alert allSelectedrow" class="hiddenrow">
+	<div colspan="8" class="selectall">{$lang->all_selected} <a href="#" onclick='inlineModeration.clearChecked();'>{$lang->clear_selection}</a></div>
+</div>]]></template>
+		<template name="forumdisplay_inlinemoderation_col" version="1609"><![CDATA[<input type="checkbox" name="allbox" onclick="inlineModeration.checkAll(this)" style="margin-left: 7px;margin-top: 1px;" />]]></template>
+		<template name="forumdisplay_thread_gotounread" version="1609"><![CDATA[<a href="{$thread['newpostlink']}"><i class="icon-arrow-right" rel="tooltip" style="opacity: 0.2;" title="{$lang->goto_first_unread}" id="gotounread"></i></a>]]></template>
+		<template name="memberlist" version="1609"><![CDATA[<html>
+<head>
+<title>{$mybb->settings['bbname']} - {$lang->member_list}</title>
+{$headerinclude}
+<script type="text/javascript">
+	jQuery.noConflict();
+	jQuery(document).ready(function($) {
+		// Add active class to the Navbar button: Members	
+		$(".navMembers").addClass("active");
+	});			
+</script>
+</head>
+<body>
+{$header}
+{$multipage}
+
+<!-- Title -->
+<h2>{$lang->member_list}</h2>
+
+<div class="memberList">
+<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+<tr>
+<td class="thead" colspan="6">
+	<div class="float_right">
+		<a href="memberlist.php?username_match=begins&amp;username={$lang->a}" style="padding: 5px;">{$lang->a}</a>
+		<a href="memberlist.php?username_match=begins&amp;username={$lang->b}" style="padding: 5px;">{$lang->b}</a>
+		<a href="memberlist.php?username_match=begins&amp;username={$lang->c}" style="padding: 5px;">{$lang->c}</a>
+		<a href="memberlist.php?username_match=begins&amp;username={$lang->d}" style="padding: 5px;">{$lang->d}</a>
+		<a href="memberlist.php?username_match=begins&amp;username={$lang->e}" style="padding: 5px;">{$lang->e}</a>
+		<a href="memberlist.php?username_match=begins&amp;username={$lang->f}" style="padding: 5px;">{$lang->f}</a>
+		<a href="memberlist.php?username_match=begins&amp;username={$lang->g}" style="padding: 5px;">{$lang->g}</a>
+		<a href="memberlist.php?username_match=begins&amp;username={$lang->h}" style="padding: 5px;">{$lang->h}</a>
+		<a href="memberlist.php?username_match=begins&amp;username={$lang->i}" style="padding: 5px;">{$lang->i}</a>
+		<a href="memberlist.php?username_match=begins&amp;username={$lang->j}" style="padding: 5px;">{$lang->j}</a>
+		<a href="memberlist.php?username_match=begins&amp;username={$lang->k}" style="padding: 5px;">{$lang->k}</a>
+		<a href="memberlist.php?username_match=begins&amp;username={$lang->l}" style="padding: 5px;">{$lang->l}</a>
+		<a href="memberlist.php?username_match=begins&amp;username={$lang->m}" style="padding: 5px;">{$lang->m}</a>
+		<a href="memberlist.php?username_match=begins&amp;username={$lang->n}" style="padding: 5px;">{$lang->n}</a>
+		<a href="memberlist.php?username_match=begins&amp;username={$lang->o}" style="padding: 5px;">{$lang->o}</a>
+		<a href="memberlist.php?username_match=begins&amp;username={$lang->p}" style="padding: 5px;">{$lang->p}</a>
+		<a href="memberlist.php?username_match=begins&amp;username={$lang->q}" style="padding: 5px;">{$lang->q}</a>
+		<a href="memberlist.php?username_match=begins&amp;username={$lang->r}" style="padding: 5px;">{$lang->r}</a>
+		<a href="memberlist.php?username_match=begins&amp;username={$lang->s}" style="padding: 5px;">{$lang->s}</a>
+		<a href="memberlist.php?username_match=begins&amp;username={$lang->t}" style="padding: 5px;">{$lang->t}</a>
+		<a href="memberlist.php?username_match=begins&amp;username={$lang->u}" style="padding: 5px;">{$lang->u}</a>
+		<a href="memberlist.php?username_match=begins&amp;username={$lang->v}" style="padding: 5px;">{$lang->v}</a>
+		<a href="memberlist.php?username_match=begins&amp;username={$lang->w}" style="padding: 5px;">{$lang->w}</a>
+		<a href="memberlist.php?username_match=begins&amp;username={$lang->x}" style="padding: 5px;">{$lang->x}</a>
+		<a href="memberlist.php?username_match=begins&amp;username={$lang->y}" style="padding: 5px;">{$lang->y}</a>
+		<a href="memberlist.php?username_match=begins&amp;username={$lang->z}" style="padding: 5px;">{$lang->z}</a>
+	</div>
+	</td>
+</tr>
+
+<tr>
+<td class="tcat" width="1%"><span class="smalltext"{$lang->avatar}</span></td>
+<td class="tcat"><span class="smalltext">{$lang->username}</span></td>
+<td class="tcat" width="15%" align="center"><span class="smalltext">{$lang->joined}</span></td>
+<td class="tcat" width="15%" align="center"><span class="smalltext">{$lang->lastvisit}</span></td>
+<td class="tcat" width="10%" align="center"><span class="smalltext">{$lang->posts}</span></td>
+{$referral_header}
+</tr>
+{$users}
+</table>
+<div class="float_right" style="padding-top: 4px;">
+	<a href="showteam.php">{$lang->forumteam}</a>
+</div>
+{$multipage}
+<br style="clear: both;" />
+<br />
+<form method="post" action="memberlist.php">
+<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+<tr>
+<td class="thead" colspan="3">
+	<div class="float_right">
+		<a href="memberlist.php?action=search">{$lang->advanced_search}</a>
+	</div>
+	<div>{$lang->search_members}</div>
+</td>
+</tr>
+<tr>
+	<td class="tcat"><label for="username">{$lang->username}</label></td>
+	<td class="tcat"><label for="website">{$lang->website}</label></td>
+	<td class="tcat"><label for="sort">{$lang->sort_by}</label></td>
+</tr>
+<tr>
+	<td class="trow1" width="33%" style="vertical-align: top;">
+		{$lang->contains}<br />
+		<input type="text" class="textbox" name="username" id="username" style="width: 99%; margin-top: 4px;" value="{$search_username}" />
+	</td>
+	<td class="trow1" width="33%" style="vertical-align: top;">
+		{$lang->contains}<br />
+		<input type="text" class="textbox" name="website" id="website" style="width: 99%; margin-top: 4px;" value="{$search_website}" />
+	</td>
+	<td class="trow1" width="33%">
+		<select name="sort" id="sort" style="width: 99%;">
+			<option value="username"{$sort_selected['username']}>{$lang->sort_by_username}</option>
+			<option value="regdate"{$sort_selected['regdate']}>{$lang->sort_by_regdate}</option>
+			<option value="lastvisit"{$sort_selected['lastvisit']}>{$lang->sort_by_lastvisit}</option>
+			<option value="postnum"{$sort_selected['postnum']}>{$lang->sort_by_posts}</option>
+			<option value="referrals"{$sort_selected['referrals']}>{$lang->sort_by_referrals}</option>
+		</select><br />
+		<span class="smalltext">
+		<input type="radio" class="radio" name="order" id="order_asc" value="ascending"{$order_check['ascending']} /> <label for="order_asc">{$lang->order_asc}</label><br />
+		<input type="radio" class="radio" name="order" id="order_desc" value="descending"{$order_check['descending']} /> <label for="order_desc">{$lang->order_desc}</label>
+		</span>
+	</td>
+</tr>
+</table>
+<div align="center"><br /><input type="submit" class="button" name="submit" value="{$lang->search}" /></div>
+</form>
+{$footer}
+<script type="text/javascript" src="jscripts/autocomplete.js?ver=1400"></script>
+<script type="text/javascript">
+<!--
+	if(use_xmlhttprequest == "1")
+	{
+		new autoComplete("username", "xmlhttp.php?action=get_users", {valueSpan: "username"});
+	}
+// -->
+</script>
+</body>
+</html>]]></template>
+		<template name="forumdisplay_inlinemoderation" version="1609"><![CDATA[<!-- Modoptions  Toggle-->
+	<div class="modOptionsToggle">Mod Options</div>
+<div class="modOptions" style="">
+<script type="text/javascript" src="jscripts/inline_moderation.js?ver=1600"></script>
+		<form action="moderation.php" method="post">
+<input type="hidden" name="my_post_key" value="{$mybb->post_code}" />
+<input type="hidden" name="fid" value="{$fid}" />
+<input type="hidden" name="modtype" value="inlinethread" />
+<span class="smalltext"><strong>{$lang->inline_thread_moderation}</strong></span>
+<select name="action">
+	<option value="delayedmoderation">{$lang->delayed_moderation}</option>
+	<optgroup label="{$lang->standard_mod_tools}">
+		<option value="multiclosethreads" selected="selected">{$lang->close_threads}</option>
+		<option value="multiopenthreads">{$lang->open_threads}</option>
+		<option value="multistickthreads">{$lang->stick_threads}</option>
+		<option value="multiunstickthreads">{$lang->unstick_threads}</option>
+		<option value="multideletethreads">{$lang->delete_threads}</option>
+		<option value="multimovethreads">{$lang->move_threads}</option>
+		<option value="multiapprovethreads">{$lang->approve_threads}</option>
+		<option value="multiunapprovethreads">{$lang->unapprove_threads}</option>
+	</optgroup>
+	{$customthreadtools}
+</select>
+<input type="submit" class="btn btn-small btn-danger" name="go" value="{$lang->inline_go} ({$inlinecount})" id="inline_go" />&nbsp;
+<input type="button" onclick="javascript:inlineModeration.clearChecked();" value="{$lang->clear}" class="btn btn-small" />
+</form>
+<script type="text/javascript">
+<!--
+	var go_text = "{$lang->inline_go}";
+	var all_text = "{$threadcount}";
+	var inlineType = "forum";
+	var inlineId = {$fid};
+// -->
+</script>
+<br />
+</div>]]></template>
+		<template name="reputation" version="1609"><![CDATA[<html>
+<head>
+<title>{$mybb->settings['bbname']} - {$lang->reputation_report}</title>
+{$headerinclude}
+<script type="text/javascript">
+<!--
+	var delete_reputation_confirm = "{$lang->delete_reputation_confirm}";
+// -->
+</script>
+	<script type="text/javascript">
+		jQuery.noConflict();
+		jQuery(document).ready(function($) {
+
+			$(".navMembers").addClass("active");
+
+		});			
+	</script>
+</head>
+<body>
+{$header}
+{$add_reputation}
+<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder" style="clear: both;">
+<tr>
+	<td class="thead"><strong>{$lang->reputation_report}</strong></td>
+</tr>
+<tr>
+	<td class="tcat"><strong>{$lang->summary}</strong></td>
+</tr>
+<tr>
+	<td class="trow1">
+	<table width="100%" cellspacing="0" cellpadding="0" border="0">
+		<tr>
+			<td>
+				<span class="largetext"><strong>{$username}</strong></span><br />
+				<span class="smalltext">
+					({$usertitle})<br />
+					<br />
+					<strong>{$lang->total_reputation}:</strong> <span class="repbox {$total_class}">{$user['reputation']}</span><br /><br />
+					<strong>{$lang->reputation_members} {$rep_members}</strong><br />
+					<strong>{$lang->reputation_posts} {$rep_posts}</strong><br />
+					<strong class="reputation_positive">{$lang->positive_count}:</strong> {$positive_count} {$pos_rep_info}<br />
+					<strong class="reputation_neutral">{$lang->neutral_count}:</strong> {$neutral_count} {$neu_rep_info}<br />
+					<strong class="reputation_negative">{$lang->negative_count}:</strong> {$negative_count} {$neg_rep_info}
+				</span>
+			</td>
+			<td align="right" style="width: 300px;">
+					<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder trow2">
+						<tr>
+							<td>&nbsp;</td>
+							<td><span class="smalltext reputation_positive">{$lang->positive_count}</span></td>
+							<td><span class="smalltext reputation_neutral">{$lang->neutral_count}</span></td>
+							<td><span class="smalltext reputation_negative">{$lang->negative_count}</span></td>
+						</tr>
+						<tr>
+							<td style="text-align: right;"><span class="smalltext">{$lang->last_week}</span></td>
+							<td style="text-align: center;"><span class="smalltext">{$positive_week}</span></td>
+							<td style="text-align: center;"><span class="smalltext">{$neutral_week}</span></td>
+							<td style="text-align: center;"><span class="smalltext">{$negative_week}</span></td>
+						</tr>
+						<tr>
+							<td style="text-align: right;"><span class="smalltext">{$lang->last_month}</span></td>
+							<td style="text-align: center;"><span class="smalltext">{$positive_month}</span></td>
+							<td style="text-align: center;"><span class="smalltext">{$neutral_month}</span></td>
+							<td style="text-align: center;"><span class="smalltext">{$negative_month}</span></td>
+						</tr>
+						<tr>
+							<td style="text-align: right;"><span class="smalltext">{$lang->last_6months}</span></td>
+							<td style="text-align: center;"><span class="smalltext">{$positive_6months}</span></td>
+							<td style="text-align: center;"><span class="smalltext">{$neutral_6months}</span></td>
+							<td style="text-align: center;"><span class="smalltext">{$negative_6months}</span></td>
+						</tr>
+					</table>
+			</td>
+		</tr>
+	</table>
+	</td>
+</tr>
+<tr>
+	<td class="tcat"><strong>{$lang->comments}</strong></td>
+</tr>
+{$reputation_votes}
+<tr>
+	<td class="tfoot" align="right">
+	<form action="reputation.php" method="get">
+		<input type="hidden" name="uid" value="{$user['uid']}" />
+		<select name="show">
+			<option value="all" {$show_selected['all']}>{$lang->show_all}</option>
+			<option value="positive" {$show_selected['positive']}>{$lang->show_positive}</option>
+			<option value="neutral" {$show_selected['neutral']}>{$lang->show_neutral}</option>
+			<option value="negative" {$show_selected['negative']}>{$lang->show_negative}</option>
+		</select>
+		<select name="sort">
+			<option value="dateline" {$sort_selected['last_updated']}>{$lang->sort_updated}</option>
+			<option value="username" {$sort_selected['username']}>{$lang->sort_username}</option>
+		</select>
+		{$gobutton}
+	</form>
+	</td>
+</tr>
+</table>
+{$multipage}
+{$footer}
+</body>
+</html>]]></template>
+		<template name="forumdisplay_searchforum" version="1609"><![CDATA[<div class="searchBoxContainer">
+<form action="search.php" method="post">
+	<input type="text" class="textbox searchBox" name="keywords" value="Search Forum...">
+	<input type="submit" class="btn btn-mini searchBoxBtn" value="Search">
+	<input type="hidden" name="action" value="do_search" />
+	<input type="hidden" name="forums" value="{$fid}" />
+	<input type="hidden" name="postthread" value="1" />
+	</form><br />
+</div>]]></template>
+		<template name="forumjump_advanced" version="1609"><![CDATA[<div class="forumJump hidden-phone">
+<form action="forumdisplay.php" method="get">
+<select name="{$name}" onchange="window.location=({$forum_link})" class="forumJumpSelect">
+<option value="-1" {$jumpsel['default']}>{$lang->forumjump_select}</option>
+<option value="-1">--------------------</option>
+<option value="-4">{$lang->forumjump_pms}</option>
+<option value="-3">{$lang->forumjump_usercp}</option>
+<option value="-5">{$lang->forumjump_wol}</option>
+<option value="-2">{$lang->forumjump_search}</option>
+<option value="-1">{$lang->forumjump_home}</option>
+{$forumjumpbits}
+</select>
+{$gobutton}
+</form>
+</div>]]></template>
+	</templates>
+</theme>

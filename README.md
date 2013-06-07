@@ -1,2 +1,0 @@
-OpenSkin-Basic-Theme
-====================
